@@ -1,0 +1,14 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+
+/* font from: https://www.cssigniter.com/20-best-cursive-fonts-to-download-for-free/ */
+@font-face {
+    font-family: veganStyle;
+    src: url("../src/assets/fonts/VeganStylePersonalUse-5Y58.ttf");
+  }

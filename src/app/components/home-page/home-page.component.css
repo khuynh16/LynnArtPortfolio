@@ -1,0 +1,75 @@
+.banner {
+    height: 100vh;
+    background-image:url('../../../assets/images/home-page-image-copy.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    position: relative;
+}
+
+/* font-family: 'Poppins', sans-serif; */
+/* font-family: 'PT Serif', serif; */
+
+.name {
+    position: absolute;
+    font-size: 75px;
+    font-family: 'veganStyle', sans-serif;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -250%);
+    color: white;
+}
+
+.subtext {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 20px;
+    font-family: 'Poppins', serif;
+    color: white;
+}
+
+.belowBannerContent {
+    height: 700px;
+}
+
+.buttons {
+    display: flex;
+    justify-content: flex-end;
+    padding: 15px;
+}
+
+.buttons button {
+    width: 8vw;
+    height: 5vh;
+    border-radius: 20px;
+    background: transparent;
+    border-color: white;
+    color: white;
+    font-family: 'Poppins', sans-serif;
+}
+
+.buttons button:hover {
+   color: rgb(35, 222, 255);
+   border-color: rgb(35, 222, 255);
+}
+
+.buttons button.social {
+    width: 0vw;
+}
+
+.buttons button:not(:first-child):not(:last-child) {
+    margin-left: 5px;
+    margin-right: 5px;
+}
+
+.fa-instagram:before,
+.fa-linkedin:before {
+    font-size: 25px;
+}
+
+@media only screen and (max-width: 1180px)  {
+    .banner {
+        background-size: contain;
+    }
+}
