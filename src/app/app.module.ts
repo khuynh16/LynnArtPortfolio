@@ -8,11 +8,17 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 import { MatButtonModule } from '@angular/material/button';
 import { MatIconModule } from '@angular/material/icon';
+import { AboutPageComponent } from './components/about-page/about-page.component';
+import { GalleryComponent } from './components/gallery/gallery.component';
+import { ContactComponent } from './components/contact/contact.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    HomePageComponent
+    HomePageComponent,
+    AboutPageComponent,
+    GalleryComponent,
+    ContactComponent
   ],
   imports: [
     BrowserModule,

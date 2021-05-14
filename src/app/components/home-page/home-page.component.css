@@ -3,6 +3,7 @@
     background-image:url('../../../assets/images/home-page-image-copy.jpg');
     background-size: cover;
     background-repeat: no-repeat;
+    background-position: center;
     position: relative;
 }
 
@@ -17,6 +18,8 @@
     left: 50%;
     transform: translate(-50%, -250%);
     color: white;
+    width: 100%;
+    text-align: center;
 }
 
 .subtext {
@@ -27,10 +30,8 @@
     font-size: 20px;
     font-family: 'Poppins', serif;
     color: white;
-}
-
-.belowBannerContent {
-    height: 700px;
+    width: 100%;
+    text-align: center;
 }
 
 .buttons {
@@ -58,9 +59,8 @@
     width: 0vw;
 }
 
-.buttons button:not(:first-child):not(:last-child) {
-    margin-left: 5px;
-    margin-right: 5px;
+.buttons button:not(:last-child) {
+    margin-right: 10px;
 }
 
 .fa-instagram:before,
@@ -70,6 +70,62 @@
 
 @media only screen and (max-width: 1180px)  {
     .banner {
-        background-size: contain;
+        background-size: cover;
+    }
+}
+
+@media only screen and (max-width: 1150px)  {
+    .buttons button {
+        width: 10vw;
+    }
+}
+
+@media only screen and (max-width: 880px)  {
+    .buttons button {
+        width: 12vw;
+    }
+
+    .name {
+        font-size: 50px;
+        transform: translate(-50%, -400%);
+    }
+
+    .subtext {
+        font-size: 16px;
+        transform: translate(-50%, -250%);
+    }
+}
+
+@media only screen and (max-width: 700px)  {
+    .buttons {
+        display: none;
+    }
+}
+
+@media only screen and (max-width: 1180px)  {
+    .banner {
+        background-size: cover;
+    }
+}
+
+@media only screen and (max-width: 1150px)  {
+    .buttons button {
+        width: 10vw;
+    }
+}
+
+@media only screen and (max-width: 880px)  {
+    .buttons button {
+        width: 12vw;
+    }
+
+    .name {
+        font-size: 50px;
+        transform: translate(-50%, -400%);
+    }
+
+    .subtext {
+        font-size: 16px;
+        transform: translate(-50%, -250%);
     }
 }
