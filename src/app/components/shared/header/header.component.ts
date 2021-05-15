@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { AfterViewInit, Component, ElementRef, OnInit, ViewChild } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 
 @Component({
@@ -6,7 +6,8 @@ import { ActivatedRoute } from '@angular/router';
   templateUrl: './header.component.html',
   styleUrls: ['./header.component.css']
 })
-export class HeaderComponent implements OnInit {
+export class HeaderComponent implements OnInit, AfterViewInit {
+  @ViewChild('dropdownMenu', { static: true }) input: ElementRef;
   isMenuOpen = false;
   currentRoute: string;
 
@@ -15,6 +16,16 @@ export class HeaderComponent implements OnInit {
   }
 
   ngOnInit(): void {
+  }
+
+  ngAfterViewInit() {
+    // style to header buttons when on gallery page
+    if (this.currentRoute === 'gallery') {
+      for (let button of this.input.nativeElement.children) {
+        button.style.border = "1px solid black";
+        button.style.color = "black";
+      }
+    }
   }
 
   toggleHamburger(dropdownMenu: HTMLElement) {
