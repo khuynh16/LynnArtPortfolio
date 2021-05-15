@@ -1,0 +1,12 @@
+<button mat-button class="hamburger" (click)="toggleHamburger(dropdownMenu)">
+        <div class="line"></div>
+        <div class="line"></div>
+        <div class="line"></div>
+</button>
+<div #dropdownMenu class="buttons">
+    <button mat-stroked-button>About</button>
+    <button mat-stroked-button routerLink="/gallery">Gallery</button>
+    <button mat-stroked-button>Contact</button>
+    <button class="social" mat-stroked-button><i class="fab fa-instagram"></i></button>
+    <button class="social" mat-stroked-button><i class="fab fa-linkedin"></i></button>
+</div>

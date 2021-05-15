@@ -11,6 +11,7 @@ import { MatIconModule } from '@angular/material/icon';
 import { AboutPageComponent } from './components/about-page/about-page.component';
 import { GalleryComponent } from './components/gallery/gallery.component';
 import { ContactComponent } from './components/contact/contact.component';
+import { HeaderComponent } from './components/shared/header/header.component';
 
 @NgModule({
   declarations: [
@@ -18,7 +19,8 @@ import { ContactComponent } from './components/contact/contact.component';
     HomePageComponent,
     AboutPageComponent,
     GalleryComponent,
-    ContactComponent
+    ContactComponent,
+    HeaderComponent
   ],
   imports: [
     BrowserModule,

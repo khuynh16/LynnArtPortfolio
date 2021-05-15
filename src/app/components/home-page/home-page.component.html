@@ -1,17 +1,5 @@
 <div class="banner">
     <p class="name">Lynn Nguyen</p>
     <p class="subtext">Painter. Digital Artist. Animator.</p>
-    <button mat-button class="hamburger" (click)="toggleHamburger(dropdownMenu)">
-        <div class="line"></div>
-        <div class="line"></div>
-        <div class="line"></div>
-    </button>
-    
-    <div #dropdownMenu class="buttons">
-        <button mat-stroked-button>About</button>
-        <button mat-stroked-button>Gallery</button>
-        <button mat-stroked-button>Contact</button>
-        <button class="social" mat-stroked-button><i class="fab fa-instagram"></i></button>
-        <button class="social" mat-stroked-button><i class="fab fa-linkedin"></i></button>
-    </div>
+    <app-header></app-header>
 </div>
