@@ -1,7 +1,13 @@
 <div class="banner">
     <p class="name">Lynn Nguyen</p>
     <p class="subtext">Painter. Digital Artist. Animator.</p>
-    <div class="buttons">
+    <button mat-button class="hamburger" (click)="toggleHamburger(dropdownMenu)">
+        <div class="line"></div>
+        <div class="line"></div>
+        <div class="line"></div>
+    </button>
+    
+    <div #dropdownMenu class="buttons">
         <button mat-stroked-button>About</button>
         <button mat-stroked-button>Gallery</button>
         <button mat-stroked-button>Contact</button>

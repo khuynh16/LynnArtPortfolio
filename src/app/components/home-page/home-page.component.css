@@ -97,8 +97,61 @@
 }
 
 @media only screen and (max-width: 700px)  {
+    .displayDropdown {
+        transform: translateY(0%) !important;
+    }
+
+    .hideDropdown {
+        transform: translateY(-100%) !important;
+    }
+
+    .addTransitionSpeed {
+        transition: 0.5s;
+    }
+
     .buttons {
-        display: none;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+        width: 100%;
+        background-color: rgba(255, 255, 255, .15);  
+        backdrop-filter: blur(30px);
+        padding-top: 60px;
+        height: 50%;
+        transform: translateY(-100%);
+    }
+
+    .buttons button {
+        border: none;
+        width: 100% !important;
+        border-radius: 0;
+        font-size: 20px;
+    }
+
+    /* .buttons button:not(:last-child) {
+        margin-bottom: 10px;
+    } */
+
+    .hamburger {
+        position: absolute;
+        cursor: pointer;
+        right: 5%;
+        top: 7%;
+        transform: translate(-5%, -50%);
+        z-index: 2;
+        padding-left: 0;
+        padding-right: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 40px;
+    }
+
+    .line {
+        width: 30px;
+        height: 3px;
+        background: white;
+        margin: 5px;
     }
 }
 
