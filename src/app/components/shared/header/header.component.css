@@ -24,6 +24,11 @@
     padding: 40px 15px 0 0;
 }
 
+.buttons .activeRoute {
+    color: #fbe6e6 !important;
+    background-color: black;
+}
+
 .buttons button {
     width: 8vw;
     height: 5vh;

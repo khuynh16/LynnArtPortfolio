@@ -36,14 +36,10 @@ export class GalleryComponent implements OnInit {
       src: "../../../assets/images/place_mapping_closeup.jpg",
       alt: "piece of multiple layers"
     }
-
   ]
-
-  
 
   constructor() { }
 
   ngOnInit(): void {
   }
-
 }
