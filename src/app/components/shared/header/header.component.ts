@@ -1,4 +1,4 @@
-import { AfterViewInit, Component, ElementRef, OnInit, ViewChild } from '@angular/core';
+import { AfterViewInit, Component, ElementRef, OnInit, ViewChild, HostListener } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 
 @Component({
@@ -7,12 +7,25 @@ import { ActivatedRoute } from '@angular/router';
   styleUrls: ['./header.component.css']
 })
 export class HeaderComponent implements OnInit, AfterViewInit {
+  @ViewChild('line1', { static: true }) line1: ElementRef;
+  @ViewChild('line2', { static: true }) line2: ElementRef;
+  @ViewChild('line3', { static: true }) line3: ElementRef;
   @ViewChild('dropdownMenu', { static: true }) input: ElementRef;
   isMenuOpen = false;
   currentRoute: string;
+  screenHeight: number;
+  screenWidth: number;
 
   constructor(private route: ActivatedRoute) {
     this.currentRoute = route.snapshot.url[0].path;
+    this.getScreenSize();
+  }
+
+  @HostListener('window:resize', ['$event'])
+    getScreenSize(event?) {
+      this.screenHeight = window.innerHeight;
+      this.screenWidth = window.innerWidth;
+      console.log(this.screenHeight, this.screenWidth);
   }
 
   ngOnInit(): void {
@@ -21,9 +34,13 @@ export class HeaderComponent implements OnInit, AfterViewInit {
   ngAfterViewInit() {
     // style to header buttons when on gallery page
     if (this.currentRoute === 'gallery') {
+      this.line1.nativeElement.style.backgroundColor = "black";
+      this.line2.nativeElement.style.backgroundColor = "black";
+      this.line3.nativeElement.style.backgroundColor = "black";
+
       for (let button of this.input.nativeElement.children) {
-        button.style.border = "1px solid black";
         button.style.color = "black";
+        button.style.border = "1px solid black";
       }
     }
   }

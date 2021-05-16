@@ -4,8 +4,9 @@
     padding: 0;
 }
 
-html, body { height: 100%; }
-body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+html, body { 
+    height: 100%;
+}
 
 /* font from: https://www.cssigniter.com/20-best-cursive-fonts-to-download-for-free/ */
 @font-face {

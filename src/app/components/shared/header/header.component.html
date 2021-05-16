@@ -1,7 +1,7 @@
-<button mat-button class="hamburger" (click)="toggleHamburger(dropdownMenu)">
-        <div class="line"></div>
-        <div class="line"></div>
-        <div class="line"></div>
+<button mat-button class="hamburger"(click)="toggleHamburger(dropdownMenu)">
+    <div #line1 class="line"></div>
+    <div #line2 class="line"></div>
+    <div #line3 class="line"></div>
 </button>
 <div #dropdownMenu class="buttons">
     <button mat-stroked-button routerLink="/about">About</button>

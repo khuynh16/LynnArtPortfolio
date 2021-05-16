@@ -94,17 +94,22 @@
         flex-direction: column;
         justify-content: space-evenly;
         width: 100%;
-        background-color: rgb(0 0 0 / 10%);
+        background-color: rgb(255 255 255 / 10%);
         backdrop-filter: blur(30px);
         padding-top: 60px;
-        height: 50%;
+        padding-right: 0;
+        height: 50vh;
         transform: translateY(-100%);
     }
 
     .buttons button {
-        border: none;
         width: 100% !important;
         border-radius: 0;
         font-size: 20px;
+        border: 0px !important;
+    }
+
+    .buttons button:hover {
+        color: white;
     }
 }
