@@ -12,6 +12,7 @@ export class HeaderComponent implements OnInit, AfterViewInit {
   @ViewChild('line3', { static: true }) line3: ElementRef;
   @ViewChild('dropdownMenu', { static: true }) input: ElementRef;
   isMenuOpen = false;
+  isHomePage = false;
   currentRoute: string;
   screenHeight: number;
   screenWidth: number;
@@ -29,6 +30,9 @@ export class HeaderComponent implements OnInit, AfterViewInit {
   }
 
   ngOnInit(): void {
+    if (this.currentRoute === 'home-page') {
+      this.isHomePage = true;
+    }
   }
 
   ngAfterViewInit() {

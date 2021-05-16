@@ -6,6 +6,17 @@
     height: auto;
 }
 
+.galleryCategory {
+    display: flex;
+    justify-content: center;
+    padding-top: 40px;
+}
+
+.galleryCategory p {
+    font-size: 2.5rem;
+    font-family: 'PT Serif';
+}
+
 .container {
     min-height: 100vh;
     height: auto;
