@@ -1,11 +1,18 @@
 <div class="container">
     <app-header></app-header>
-    <div class="galleryCategory">
-        <p>Traditional Art</p>
-    </div>
+    <!-- <div class="filterSection">
+        <p>F</p>
+    </div> -->
     <div class="galleryWall">
-        <a href="{{ image.src }}" class="imageCard" *ngFor="let image of images" data-fancybox="gallery" data-caption="Caption #1">
-            <img src="{{ image.src }}">
+        <!-- 
+            let card of cards
+            if image, display image src
+            if video, display thumbnail image
+        
+        -->
+        <a href="{{ card.src }}" class="imageCard" *ngFor="let card of cards" data-fancybox="gallery" data-caption="Caption #1">
+            <img *ngIf="!card.thumbnail" src="{{ card.src }}">
+            <img *ngIf="card.thumbnail" src="{{ card.thumbnail }}">
         </a>
     </div>
 </div>
