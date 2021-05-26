@@ -130,6 +130,7 @@
         padding-right: 0;
         height: 50vh;
         transform: translateY(-100%);
+        z-index: 100;
     }
 
     .buttons button {
