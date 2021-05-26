@@ -2,6 +2,7 @@
     min-height: 100vh;
     height: auto;
     background-color: #fce6e7;
+    overflow: hidden;
 }
 
 .innerContainer {
@@ -67,10 +68,6 @@ textarea {
     max-height: 200px;
 }
 
-:host ::ng-deep .mat-form-field-appearance-outline.mat-form-field-can-float.mat-form-field-should-float .mat-form-field-label, .mat-form-field-appearance-outline.mat-form-field-can-float .mat-input-server:focus+.mat-form-field-label-wrapper .mat-form-field-label {
-    padding-right: 10px;
-}
-
 .swing-in-top-fwd {
 	-webkit-animation: swing-in-top-fwd 0.7s cubic-bezier(0.175, 0.885, 0.320, 1.275) both;
 	        animation: swing-in-top-fwd 0.7s cubic-bezier(0.175, 0.885, 0.320, 1.275) both;
@@ -118,6 +115,34 @@ textarea {
       -webkit-transform-origin: top;
               transform-origin: top;
       opacity: 1;
+    }
+}
+
+@media only screen and (max-width: 1020px) {
+    .nameRow {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .nameRow > * {
+        width: 100%;
+    }
+}
+
+@media only screen and (max-width: 750px) {
+    form {
+        width: 80vw;
+    }
+}
+
+@media only screen and (max-width: 500px) {
+    form {
+        width: 95vw;
+    }
+
+    button {
+        width: 35%;
+        left: calc(50% - 35% / 2);
     }
 }
 
