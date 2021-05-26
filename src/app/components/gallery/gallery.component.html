@@ -1,18 +1,12 @@
 <div class="container">
     <app-header></app-header>
-    <!-- <div class="filterSection">
-        <p>F</p>
-    </div> -->
     <div class="galleryWall">
-        <!-- 
-            let card of cards
-            if image, display image src
-            if video, display thumbnail image
-        
-        -->
         <a href="{{ card.src }}" class="imageCard" *ngFor="let card of cards" data-fancybox="gallery" data-caption="Caption #1">
             <img *ngIf="!card.thumbnail" src="{{ card.src }}">
             <img *ngIf="card.thumbnail" src="{{ card.thumbnail }}">
+            <div class="overlay">
+                <p>This is the overlay caption.</p>
+            </div>
         </a>
     </div>
 </div>
