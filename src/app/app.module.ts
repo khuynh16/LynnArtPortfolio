@@ -8,6 +8,8 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 import { MatButtonModule } from '@angular/material/button';
 import { MatIconModule } from '@angular/material/icon';
+import { MatFormFieldModule } from '@angular/material/form-field';
+import { MatInputModule } from '@angular/material/input';
 import { AboutPageComponent } from './components/about-page/about-page.component';
 import { GalleryComponent } from './components/gallery/gallery.component';
 import { ContactComponent } from './components/contact/contact.component';
@@ -27,7 +29,9 @@ import { HeaderComponent } from './components/shared/header/header.component';
     AppRoutingModule,
     BrowserAnimationsModule,
     MatButtonModule,
-    MatIconModule
+    MatIconModule,
+    MatFormFieldModule,
+    MatInputModule
   ],
   providers: [],
   bootstrap: [AppComponent]

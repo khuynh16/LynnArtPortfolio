@@ -37,7 +37,9 @@ export class HeaderComponent implements OnInit, AfterViewInit {
 
   ngAfterViewInit() {
     // style to header buttons when on gallery page
-    if (this.currentRoute === 'gallery' || this.currentRoute === 'about') {
+    if (this.currentRoute === 'gallery' || 
+        this.currentRoute === 'about' ||
+        this.currentRoute === 'contact') {
       this.line1.nativeElement.style.backgroundColor = "black";
       this.line2.nativeElement.style.backgroundColor = "black";
       this.line3.nativeElement.style.backgroundColor = "black";

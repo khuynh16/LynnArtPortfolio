@@ -1,1 +1,34 @@
-<p>contact works!</p>
+<div class="container">
+    <app-header></app-header>
+    <div class="innerContainer">
+        <form action="">
+            <div class="textInformation">
+                <h2>Feel Free to Contact Me via Email!</h2>
+                <p>Fill out the below form for any inquiries.</p>
+            </div>
+            <hr>
+            <div class="nameRow">
+                <mat-form-field>
+                    <mat-label>First Name</mat-label>
+                    <input matInput>
+                    <mat-icon matSuffix>person_pin</mat-icon>
+                </mat-form-field>
+                <mat-form-field>
+                    <mat-label>Last Name</mat-label>
+                    <input matInput>
+                    <mat-icon matSuffix>person_pin</mat-icon>
+                </mat-form-field>
+            </div>
+            <mat-form-field>
+                <mat-label>Email</mat-label>
+                <input matInput>
+                <mat-icon matSuffix>email</mat-icon>
+            </mat-form-field>
+            <mat-form-field appearance="outline">
+                <mat-label>Your Message</mat-label>
+                <textarea rows="6" matInput placeholder="Hello Lynn, ..."></textarea>
+            </mat-form-field>
+            <button mat-stroked-button>Submit</button>
+        </form>
+    </div>
+</div>
