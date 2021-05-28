@@ -19,7 +19,6 @@ export class GalleryCardDisplayComponent implements OnInit {
 
   ngOnInit(): void {
     this.cards = Cards;
-    console.log(this.currentRoute);
     if (this.currentRoute === 'gallery/traditional') {
       this.cards = this.cards.filter(card => card.category === 'traditional');
     } else if (this.currentRoute === 'gallery/digital') {
