@@ -2,4 +2,5 @@
     min-height: 100vh;
     height: auto;
     background-color: #fce6e7;
+    overflow: hidden;
 }

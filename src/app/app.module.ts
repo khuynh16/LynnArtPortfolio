@@ -13,7 +13,10 @@ import { MatInputModule } from '@angular/material/input';
 import { AboutPageComponent } from './components/about-page/about-page.component';
 import { GalleryComponent } from './components/gallery/gallery.component';
 import { ContactComponent } from './components/contact/contact.component';
-import { HeaderComponent } from './components/shared/header/header.component';
+import { HeaderComponent } from './components/shared/components/header/header.component';
+import { TraditionalComponent } from './components/gallery/traditional/traditional.component';
+import { DigitalComponent } from './components/gallery/digital/digital.component';
+import { GalleryCardDisplayComponent } from './components/shared/components/gallery-card-display/gallery-card-display.component';
 
 @NgModule({
   declarations: [
@@ -22,7 +25,10 @@ import { HeaderComponent } from './components/shared/header/header.component';
     AboutPageComponent,
     GalleryComponent,
     ContactComponent,
-    HeaderComponent
+    HeaderComponent,
+    TraditionalComponent,
+    DigitalComponent,
+    GalleryCardDisplayComponent
   ],
   imports: [
     BrowserModule,

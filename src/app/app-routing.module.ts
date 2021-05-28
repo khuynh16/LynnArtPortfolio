@@ -3,6 +3,7 @@ import { RouterModule, Routes } from '@angular/router';
 import { AboutPageComponent } from './components/about-page/about-page.component';
 import { ContactComponent } from './components/contact/contact.component';
 import { GalleryComponent } from './components/gallery/gallery.component';
+import { TraditionalComponent } from './components/gallery/traditional/traditional.component';
 import { HomePageComponent } from './components/home-page/home-page.component';
 
 const routes: Routes = [
@@ -11,6 +12,7 @@ const routes: Routes = [
    { path: 'gallery', component: GalleryComponent },
    { path: 'about', component: AboutPageComponent },
    { path: 'contact', component: ContactComponent },
+   { path: 'gallery/traditional', component: TraditionalComponent },
 ];
 
 @NgModule({

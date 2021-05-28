@@ -5,6 +5,7 @@
     background-repeat: no-repeat;
     background-position: center;
     position: relative;
+    overflow: hidden;
 }
 
 /* font-family: 'Poppins', sans-serif; */
@@ -40,8 +41,8 @@
 }
 
 .fade-in {
-	-webkit-animation: fade-in 1.2s cubic-bezier(0.390, 0.575, 0.565, 1.000) 1.5s both;
-	        animation: fade-in 1.2s cubic-bezier(0.390, 0.575, 0.565, 1.000) 1.5s both;
+	-webkit-animation: fade-in 1.2s cubic-bezier(0.390, 0.575, 0.565, 1.000) 1.3s both;
+	        animation: fade-in 1.2s cubic-bezier(0.390, 0.575, 0.565, 1.000) 1.3s both;
 }
 
 /* ----------------------------------------------

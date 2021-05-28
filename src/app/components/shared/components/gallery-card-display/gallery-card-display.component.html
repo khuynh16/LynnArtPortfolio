@@ -1,0 +1,12 @@
+<div class="container">
+    <app-header></app-header>
+    <div class="galleryWall">
+        <a href="{{ card.src }}" class="imageCard fade-in" *ngFor="let card of cards" data-fancybox="gallery" data-caption="Caption #1">
+            <img *ngIf="!card.thumbnail" src="{{ card.src }}">
+            <img *ngIf="card.thumbnail" src="{{ card.thumbnail }}">
+            <div class="overlay">
+                <p>This is the overlay caption.</p>
+            </div>
+        </a>
+    </div>
+</div>

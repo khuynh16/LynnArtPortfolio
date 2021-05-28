@@ -15,11 +15,10 @@
 form {
     display: flex;  
     flex-direction: column;
-    border: 2px solid black;
+    border: 3px solid black;
     border-radius: 25px;
     width: 50vw;
     max-width: 600px;
-    padding: 40px;
 }
 
 .nameRow {
@@ -29,6 +28,7 @@ form {
 }
 
 .textInformation {
+    padding-top: 40px;
     text-align: center;
 }
 
@@ -45,12 +45,22 @@ hr {
     border: 1px solid black;
 }
 
+.formInput {
+    padding: 0 40px 0 40px;
+}
+
+.emailAndMessage {
+    display: flex;  
+    flex-direction: column;
+}
+
 button {
     width: 25%;
     left: calc(50% - 25% / 2);
     margin-top: 15px;
     background-color: #50b150;
     color: #fce6e7;
+    margin-bottom: 40px;
 }
 
 mat-label {
