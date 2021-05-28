@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { ActivatedRoute } from '@angular/router';
 
 import { Card } from '../../interfaces/card';
 import { Cards } from '../../models/cards';
@@ -10,11 +11,20 @@ import { Cards } from '../../models/cards';
 })
 export class GalleryCardDisplayComponent implements OnInit {
   cards: Card[];
+  currentRoute;
 
-  constructor() { }
+  constructor(private route: ActivatedRoute) {
+    this.currentRoute = route.snapshot.routeConfig.path;
+  }
 
   ngOnInit(): void {
     this.cards = Cards;
+    console.log(this.currentRoute);
+    if (this.currentRoute === 'gallery/traditional') {
+      this.cards = this.cards.filter(card => card.category === 'traditional');
+    } else if (this.currentRoute === 'gallery/digital') {
+      this.cards = this.cards.filter(card => card.category === 'digital');
+    }
   }
 
 }
