@@ -26,9 +26,7 @@ export class CardService {
   }
 
   adjustFilterView(currentFilters) {
-
     this.cards = Cards.filter(card => currentFilters.includes(card.subcategory));
-
     this.cardsSubject.next(this.cards);
   }
 }

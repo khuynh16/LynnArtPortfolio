@@ -1,4 +1,4 @@
-import { Component, OnDestroy, OnInit } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 
 import { CardService } from '../../services/card.service';
@@ -27,15 +27,6 @@ export class CategoryFilterComponent implements OnInit {
     else if (this.currentRoute === 'gallery/digital') {
       this.subCategories = SUB_CATEGORIES.filter(category => MAIN_CATEGORIES['Digital'].includes(category.name));
     }
-    
-    
-  
-      // this.subCategories.forEach(category => {
-      //     this.currentFilters.push(category.name.toLowerCase());
-      // });
-
-      // console.log('currENT');
-      // console.log(this.currentFilters);
   }
 
   toggleFilter(event) {
