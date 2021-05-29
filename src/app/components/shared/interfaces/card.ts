@@ -3,4 +3,5 @@ export interface Card {
     thumbnail?: string;
     alt: string;
     category: string;
+    subcategory: string;
 }

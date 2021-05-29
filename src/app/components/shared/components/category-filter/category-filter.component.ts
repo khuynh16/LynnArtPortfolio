@@ -1,5 +1,10 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnDestroy, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
+
+import { CardService } from '../../services/card.service';
+import { Subcategory } from '../../interfaces/subcategory';
+import { SUB_CATEGORIES } from '../../models/subcategories';
+import { MAIN_CATEGORIES } from '../../models/maincategories';
 
 @Component({
   selector: 'app-category-filter',
@@ -8,46 +13,29 @@ import { ActivatedRoute } from '@angular/router';
 })
 export class CategoryFilterComponent implements OnInit {
   currentRoute: string;
-  subCategories = [
-    {
-      name: 'Painting',
-      filterActivated: true
-    },
-    {
-      name: 'Sculpture',
-      filterActivated: true
-    },
-    {
-      name: 'Video',
-      filterActivated: true
-    },
-    {
-      name: 'Picture',
-      filterActivated: true
-    },
-  ];
-  mainCategories = {
-    'Traditional': [
-      'Painting', 
-      'Sculpture'
-    ],
-    'Digital': [
-      'Video', 
-      'Picture'
-    ]
-  };
+  subCategories: Subcategory[];
+  currentFilters: String[] = [];
 
-  constructor(private route: ActivatedRoute) {
+  constructor(private route: ActivatedRoute, public cardService: CardService) {
     this.currentRoute = route.snapshot.routeConfig.path;
   }
 
   ngOnInit(): void {
     if (this.currentRoute === 'gallery/traditional') {
-      this.subCategories = this.subCategories.filter(category => this.mainCategories['Traditional'].includes(category.name));
+      this.subCategories = SUB_CATEGORIES.filter(category => MAIN_CATEGORIES['Traditional'].includes(category.name));
     }
     else if (this.currentRoute === 'gallery/digital') {
-      this.subCategories = this.subCategories.filter(category => this.mainCategories['Digital'].includes(category.name));
+      this.subCategories = SUB_CATEGORIES.filter(category => MAIN_CATEGORIES['Digital'].includes(category.name));
     }
+    
+    
+  
+      // this.subCategories.forEach(category => {
+      //     this.currentFilters.push(category.name.toLowerCase());
+      // });
+
+      // console.log('currENT');
+      // console.log(this.currentFilters);
   }
 
   toggleFilter(event) {
@@ -75,7 +63,14 @@ export class CategoryFilterComponent implements OnInit {
         // toggle filter boolean value for current button
         this.subCategories[element].filterActivated = !this.subCategories[element].filterActivated;
 
+        this.currentFilters = [];
+        this.subCategories.forEach(category => {
+          if (category.filterActivated === true && !this.currentFilters.includes(category.name))  
+            this.currentFilters.push(category.name.toLowerCase());
+        });
+
         // call to service to update cards that are currently displayed (based on filters)
+        this.cardService.adjustFilterView(this.currentFilters);
       }
     }
   }
