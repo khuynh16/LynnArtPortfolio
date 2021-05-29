@@ -1,0 +1,20 @@
+.filterCategories {
+    height: 10vh;
+    display: flex;
+    align-items: center;
+    margin-top: 40px;
+}
+
+.filterCategories button {
+    margin-left: 10px;
+    padding: 10px;
+    box-shadow: rgba(0, 0, 0, 0.12) 0px 1px 3px, rgba(0, 0, 0, 0.24) 0px 1px 2px;
+    color: black;
+    background-color: rgb(219, 217, 217);
+    border: 2px solid black;
+}
+
+button {
+    width: 90px;
+    height: 60px;
+}

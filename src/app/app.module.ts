@@ -17,6 +17,7 @@ import { HeaderComponent } from './components/shared/components/header/header.co
 import { TraditionalComponent } from './components/gallery/traditional/traditional.component';
 import { DigitalComponent } from './components/gallery/digital/digital.component';
 import { GalleryCardDisplayComponent } from './components/shared/components/gallery-card-display/gallery-card-display.component';
+import { CategoryFilterComponent } from './components/shared/components/category-filter/category-filter.component';
 
 @NgModule({
   declarations: [
@@ -28,7 +29,8 @@ import { GalleryCardDisplayComponent } from './components/shared/components/gall
     HeaderComponent,
     TraditionalComponent,
     DigitalComponent,
-    GalleryCardDisplayComponent
+    GalleryCardDisplayComponent,
+    CategoryFilterComponent
   ],
   imports: [
     BrowserModule,
