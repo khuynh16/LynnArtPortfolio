@@ -2,7 +2,7 @@ import { Injectable } from '@angular/core';
 import { BehaviorSubject } from 'rxjs';
 
 import { Card } from '../interfaces/card';
-import { Cards } from '../models/cards';
+import { CARDS } from '../models/cards';
 
 import { SUB_CATEGORIES } from '../models/subcategories';
 
@@ -16,7 +16,7 @@ export class CardService {
   private cardsSubject: BehaviorSubject<any> = new BehaviorSubject({ cards: [] });
 
   constructor() { 
-    this.cards = Cards;
+    this.cards = CARDS;
     this.cardsSubject.next(this.cards);
     this.subCategories = SUB_CATEGORIES;
   }
@@ -26,7 +26,7 @@ export class CardService {
   }
 
   adjustFilterView(currentFilters) {
-    this.cards = Cards.filter(card => currentFilters.includes(card.subcategory));
+    this.cards = CARDS.filter(card => currentFilters.includes(card.subcategory));
     this.cardsSubject.next(this.cards);
   }
 }

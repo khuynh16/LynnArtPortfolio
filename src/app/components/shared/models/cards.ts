@@ -1,6 +1,6 @@
 import { Card } from '../interfaces/card';
 
-export let Cards: Card[] = [
+export let CARDS: Card[] = [
     {
       src: "../../../assets/images/still_life.jpg",
       alt: "piece of multiple layers",

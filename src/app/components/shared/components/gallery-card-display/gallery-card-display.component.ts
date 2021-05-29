@@ -3,7 +3,7 @@ import { ActivatedRoute } from '@angular/router';
 import { Subscription } from 'rxjs';
 
 import { Card } from '../../interfaces/card';
-import { Cards } from '../../models/cards';
+import { CARDS } from '../../models/cards';
 import { CardService } from '../../services/card.service';
 
 @Component({
@@ -34,7 +34,7 @@ export class GalleryCardDisplayComponent implements OnInit, OnDestroy {
       */
       if (this.routeFlag === "") {
         this.routeFlag = this.currentRoute;
-        this.cards = Cards;
+        this.cards = CARDS;
       } else {
         this.cards = cards;
       }
