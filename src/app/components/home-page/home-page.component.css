@@ -115,5 +115,16 @@
         font-size: 1em;
         transform: translate(-50%, -250%);
     }
+}
 
+/* @media only screen and (max-height: 1024px) {
+  .name {
+    top: 40%;
+  }
+} */
+
+@media only screen and (max-height: 550px) {
+  .name {
+    font-size: 2em;
+  }
 }

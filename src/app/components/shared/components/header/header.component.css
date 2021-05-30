@@ -178,3 +178,21 @@
         color: white;
     }
 }
+
+@media only screen and (max-height: 700px) {
+  .displayDropdown {
+      height: 75vh;
+  }
+
+  .logo button {
+      padding-top: 0;
+  }
+
+  .filterPanel {
+      top: 2%;
+  }
+
+  .buttons button {
+      height: 20%;
+  }
+}

@@ -2,7 +2,7 @@
     min-height: 100vh;
     height: auto;
     background-color: #fce6e7;
-    overflow: hidden;
+    overflow-x: hidden;
 }
 
 .innerContainer {
@@ -17,8 +17,9 @@ form {
     flex-direction: column;
     border: 3px solid black;
     border-radius: 25px;
-    width: 50vw;
+    width: 70vw;
     max-width: 600px;
+    overflow: hidden;
 }
 
 .nameRow {
@@ -46,7 +47,11 @@ hr {
 }
 
 .formInput {
-    padding: 0 40px 0 40px;
+    height: 100%;
+    width: 100%;
+    overflow-y: auto;
+    padding-right: 20px;
+    padding-left: 20px;
 }
 
 .emailAndMessage {
@@ -148,13 +153,24 @@ textarea {
 @media only screen and (max-width: 500px) {
     form {
         width: 95vw;
-        overflow-y: scroll;
         height: 80vh;
+    }
+
+    hr {
+        margin: 20px 0 20px 0;
     }
 
     button {
         width: 35%;
         left: calc(50% - 35% / 2);
+    }
+
+    .textInformation h2 {
+        font-size: 1.2em;
+    }
+
+    .textInformation p {
+        font-size: 1em;
     }
 }
 
