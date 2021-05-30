@@ -1,22 +1,24 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, ElementRef, OnInit, ViewChild, AfterViewInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 
 import { CardService } from '../../services/card.service';
 import { Subcategory } from '../../interfaces/subcategory';
 import { SUB_CATEGORIES } from '../../models/subcategories';
 import { MAIN_CATEGORIES } from '../../models/maincategories';
+import { FiltersService } from '../../services/filters.service';
 
 @Component({
   selector: 'app-category-filter',
   templateUrl: './category-filter.component.html',
   styleUrls: ['./category-filter.component.css']
 })
-export class CategoryFilterComponent implements OnInit {
+export class CategoryFilterComponent implements OnInit, AfterViewInit {
   currentRoute: string;
   subCategories: Subcategory[];
   currentFilters: String[] = [];
+  @ViewChild('filtersCategoriesElement') filtersCategories: ElementRef;
 
-  constructor(private route: ActivatedRoute, public cardService: CardService) {
+  constructor(private route: ActivatedRoute, public cardService: CardService, public filtersService: FiltersService) {
     this.currentRoute = route.snapshot.routeConfig.path;
   }
 
@@ -27,6 +29,13 @@ export class CategoryFilterComponent implements OnInit {
     else if (this.currentRoute === 'gallery/digital') {
       this.subCategories = SUB_CATEGORIES.filter(category => MAIN_CATEGORIES['Digital'].includes(category.name));
     }
+  }
+
+  ngAfterViewInit() {
+    // console.log(this.filtersCategories.nativeElement);
+    // update behaviorSubject in filters service with the filters categories div element
+    this.filtersService.updateFiltersDiv(this.filtersCategories.nativeElement);
+
   }
 
   toggleFilter(event) {

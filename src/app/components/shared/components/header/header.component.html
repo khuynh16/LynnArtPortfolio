@@ -1,4 +1,9 @@
 <div class="header">
+    <button mat-button class="filterPanel" (click)="toggleFilterPanel()" *ngIf="isGallery">
+        <div class="circle"></div>
+        <div class="circle"></div>
+        <div class="circle"></div>
+    </button>
     <div class="logo" >
         <button mat-button *ngIf="!isHomePage" routerLink="/home-page">Lynn Nguyen</button>
     </div>

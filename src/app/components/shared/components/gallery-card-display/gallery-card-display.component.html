@@ -1,14 +1,16 @@
 <div class="container">
     <app-header></app-header>
-    <app-category-filter></app-category-filter>
-    <div class="galleryWall">
-        <a href="{{ card.src }}" class="imageCard fade-in" *ngFor="let card of cards" data-fancybox="gallery" data-caption="Caption #1">
-            <img *ngIf="!card.thumbnail" src="{{ card.src }}">
-            <img *ngIf="card.thumbnail" src="{{ card.thumbnail }}">
-            <div class="overlay">
-                <p>This is the overlay caption.</p>
-            </div>
-        </a>
+    <div class="test">
+        <app-category-filter></app-category-filter>
+        <div class="galleryWall">
+            <a href="{{ card.src }}" class="imageCard fade-in" *ngFor="let card of cards" data-fancybox="gallery" data-caption="Caption #1">
+                <img *ngIf="!card.thumbnail" src="{{ card.src }}">
+                <img *ngIf="card.thumbnail" src="{{ card.thumbnail }}">
+                <div class="overlay">
+                    <p>This is the overlay caption.</p>
+                </div>
+            </a>
+        </div>
     </div>
     <div class="allFiltersDeselectedMessage" *ngIf="cards.length === 0">
         <p>All filters have been deselected. Select one to view artwork.</p>

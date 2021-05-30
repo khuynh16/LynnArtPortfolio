@@ -1,5 +1,6 @@
-<div class="filterCategories">
+<div class="filterCategories" #filtersCategoriesElement>
     <button 
+    class="filterButton"
     mat-stroked-button 
     *ngFor="let category of subCategories"
     (click)="toggleFilter($event)">

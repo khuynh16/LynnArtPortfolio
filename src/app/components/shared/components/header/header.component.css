@@ -7,7 +7,7 @@
 .logo {
     display: flex;
     align-items: flex-end;
-    padding-left: 15px;
+    padding-left: 20px;
     top: 5%;
     text-decoration: underline;
 }
@@ -15,7 +15,7 @@
 .logo button {
     font-size: 1.3em;
     font-family: veganStyle;
-    padding: 10px 10px 0 10px;
+    padding: 10px 10px 0 0;
 }
 
 .buttons {
@@ -57,7 +57,8 @@
     font-size: 25px;
 }
 
-.hamburger {
+.hamburger,
+.filterPanel {
     display: none;
 }
 
@@ -80,9 +81,14 @@
 }
 
 @media only screen and (max-width: 700px)  {
+    .header {
+        justify-content: center;
+    }
+    
     .logo {
         position: absolute;
         top: 4%;
+        padding-left: 0;
     }
 
     .hamburger {
@@ -91,14 +97,13 @@
         right: 5%;
         top: 7%;
         transform: translate(-5%, -50%);
-        z-index: 2;
         padding-left: 0;
         padding-right: 0;
         display: flex;
         justify-content: center;
         align-items: center;
         height: 40px;
-        z-index: 200;
+        z-index: 2000;
     }
 
     .line {
@@ -106,6 +111,34 @@
         height: 3px;
         background: white;
         margin: 5px;
+    }
+
+    .filterPanel {
+        position: absolute;
+        /* border: 1px solid black; */
+        left: 5%;
+        top: 3%;
+        /* transform: translate(-5%, -50%); */
+        height: 64px;
+        padding-left: 0;
+        padding-right: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border-radius: 50%;
+    }
+
+    .filterPanel div:nth-child(2) {
+        margin: 2px 0 2px 0;
+    }
+
+    .circle {
+        height: 5px;
+        width: 5px;
+        background-color: black;
+        border-radius: 50%;
+        display: flex;
+        flex-direction: column;
     }
 
     .displayDropdown {
@@ -131,7 +164,7 @@
         padding-right: 0;
         height: 50vh;
         transform: translateY(-100%);
-        z-index: 100;
+        z-index: 1000;
     }
 
     .buttons button {
