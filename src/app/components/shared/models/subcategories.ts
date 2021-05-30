@@ -21,5 +21,8 @@ export let SUB_CATEGORIES: Subcategory[] = [
       name: 'Paper Craft',
       filterActivated: true
     },
-
+    {
+      name: 'Drawing',
+      filterActivated: true
+    },
 ];

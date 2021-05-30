@@ -1,8 +1,9 @@
 export let MAIN_CATEGORIES = {
     'Traditional': [
+      'Drawing',
       'Painting',
       'Paper Craft', 
-      'Sculpture'
+      'Sculpture',
     ],
     'Digital': [
       'Video', 

@@ -18,6 +18,7 @@ import { TraditionalComponent } from './components/gallery/traditional/tradition
 import { DigitalComponent } from './components/gallery/digital/digital.component';
 import { GalleryCardDisplayComponent } from './components/shared/components/gallery-card-display/gallery-card-display.component';
 import { CategoryFilterComponent } from './components/shared/components/category-filter/category-filter.component';
+import { AlphabeticalOrderPipe } from './components/shared/pipes/alphabetical-order.pipe';
 
 @NgModule({
   declarations: [
@@ -30,7 +31,8 @@ import { CategoryFilterComponent } from './components/shared/components/category
     TraditionalComponent,
     DigitalComponent,
     GalleryCardDisplayComponent,
-    CategoryFilterComponent
+    CategoryFilterComponent,
+    AlphabeticalOrderPipe
   ],
   imports: [
     BrowserModule,

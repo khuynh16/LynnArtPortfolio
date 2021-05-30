@@ -2,7 +2,7 @@
     <button 
     class="filterButton"
     mat-stroked-button 
-    *ngFor="let category of subCategories"
+    *ngFor="let category of subCategories | alphabeticalOrder: 'name'"
     (click)="toggleFilter($event)">
         {{ category.name }}
     </button>
