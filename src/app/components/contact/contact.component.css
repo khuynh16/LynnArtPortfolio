@@ -148,6 +148,8 @@ textarea {
 @media only screen and (max-width: 500px) {
     form {
         width: 95vw;
+        overflow-y: scroll;
+        height: 80vh;
     }
 
     button {

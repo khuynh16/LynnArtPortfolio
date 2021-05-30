@@ -13,7 +13,7 @@
 
 .name {
     position: absolute;
-    font-size: 75px;
+    font-size: 4.5em;
     font-family: 'veganStyle', sans-serif;
     top: 50%;
     left: 50%;
@@ -28,7 +28,7 @@
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    font-size: 20px;
+    font-size: 1.3em;
     font-family: 'Poppins', serif;
     color: white;
     width: 100%;
@@ -107,12 +107,12 @@
   
 @media only screen and (max-width: 700px)  {
     .name {
-        font-size: 50px;
+        font-size: 2.5em;
         transform: translate(-50%, -400%);
     }
 
     .subtext {
-        font-size: 16px;
+        font-size: 1em;
         transform: translate(-50%, -250%);
     }
 
