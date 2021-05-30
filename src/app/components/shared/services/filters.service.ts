@@ -28,7 +28,7 @@ export class FiltersService {
   }
 
   closeFilterPanel(div) {
-    div.style.transform = "translateX(-100%)";
+    div.style.transform = "translateX(-120%)";
     div.style.transition = "0.3s";
   }
 

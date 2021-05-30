@@ -163,7 +163,7 @@
         padding-top: 60px;
         padding-right: 0;
         height: 50vh;
-        transform: translateY(-100%);
+        transform: translateY(-120%);
         z-index: 1000;
     }
 

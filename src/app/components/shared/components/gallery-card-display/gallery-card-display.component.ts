@@ -36,7 +36,7 @@ export class GalleryCardDisplayComponent implements OnInit, OnDestroy {
       if (this.screenWidth > 700) {
         this.filterDivReference.style.transform = "translateX(0%)";
       } else if (this.screenWidth <= 700 && this.currentFilterToggleState) {
-        this.filterDivReference.style.transform = "translateX(-100%)";
+        this.filterDivReference.style.transform = "translateX(-120%)";
       }
 
   }

@@ -37,7 +37,7 @@ button {
         top: 0;
         border-bottom-right-radius: 25px;
         margin-top: 0;
-        transform: translateX(-100%);
+        transform: translateX(-120%);
     }
 
     .filterCategories button {
@@ -46,5 +46,11 @@ button {
 
     .filterCategories button:not(:first-child) {
         margin-top: 10px;
+    }
+}
+
+@media only screen and (max-width: 480px) {
+    .filterCategories {
+        width: 50vw;
     }
 }
