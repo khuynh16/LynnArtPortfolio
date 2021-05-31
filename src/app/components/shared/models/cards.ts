@@ -180,10 +180,10 @@ export let CARDS: Card[] = [
       subcategory: "painting"
     },
     {
-      src: "../../../assets/images/digital/modeling/manipulation.jpg",
+      src: "../../../assets/images/digital/photography/manipulation.jpg",
       alt: "piece of multiple layers",
       category: "digital",
-      subcategory: "modeling"
+      subcategory: "photography"
     },
     {
       src: "../../../assets/images/digital/poster/jazz_poster.jpg",

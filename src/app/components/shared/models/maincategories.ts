@@ -9,6 +9,7 @@ export let MAIN_CATEGORIES = {
     'Digital': [
       'Video', 
       'Modeling',
-      'Poster'
+      'Poster',
+      'Photography'
     ]
 };

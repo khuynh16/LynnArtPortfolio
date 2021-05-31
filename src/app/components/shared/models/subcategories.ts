@@ -33,4 +33,8 @@ export let SUB_CATEGORIES: Subcategory[] = [
       name: 'Casting',
       filterActivated: true
     },
+    {
+      name: 'Photography',
+      filterActivated: true
+    },
 ];
