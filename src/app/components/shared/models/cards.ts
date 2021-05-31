@@ -143,4 +143,130 @@ export let CARDS: Card[] = [
       category: "traditional",
       subcategory: "drawing"
     },
+    {
+      src: "../../../assets/images/traditional/sculpture/flower_bud.jpg",
+      alt: "piece of multiple layers",
+      category: "traditional",
+      subcategory: "sculpture"
+    },
+    {
+      src: "../../../assets/images/traditional/sculpture/viet_can_flag.jpg",
+      alt: "piece of multiple layers",
+      category: "traditional",
+      subcategory: "sculpture"
+    },
+    {
+      src: "../../../assets/images/traditional/drawing/mario_logo.jpg",
+      alt: "piece of multiple layers",
+      category: "traditional",
+      subcategory: "drawing"
+    },
+    {
+      src: "../../../assets/images/traditional/painting/fruits_4_panels.jpg",
+      alt: "piece of multiple layers",
+      category: "traditional",
+      subcategory: "painting"
+    },
+    {
+      src: "../../../assets/images/traditional/drawing/black_and_white_shoes.jpg",
+      alt: "piece of multiple layers",
+      category: "traditional",
+      subcategory: "drawing"
+    },
+    {
+      src: "../../../assets/images/traditional/painting/pho_inspired_mentor.jpg",
+      alt: "piece of multiple layers",
+      category: "traditional",
+      subcategory: "painting"
+    },
+    {
+      src: "../../../assets/images/digital/modeling/manipulation.jpg",
+      alt: "piece of multiple layers",
+      category: "digital",
+      subcategory: "modeling"
+    },
+    {
+      src: "../../../assets/images/digital/poster/jazz_poster.jpg",
+      alt: "piece of multiple layers",
+      category: "digital",
+      subcategory: "poster"
+    },
+    {
+      src: "../../../assets/images/traditional/drawing/mixed_number_line_landscape.jpg",
+      alt: "piece of multiple layers",
+      category: "traditional",
+      subcategory: "drawing"
+    },
+    {
+      src: "../../../assets/images/traditional/drawing/refugees.jpg",
+      alt: "piece of multiple layers",
+      category: "traditional",
+      subcategory: "drawing"
+    },
+    {
+      src: "../../../assets/images/digital/modeling/watch_model.jpg",
+      alt: "piece of multiple layers",
+      category: "digital",
+      subcategory: "modeling"
+    },
+    {
+      src: "../../../assets/images/traditional/painting/self_portrait.jpg",
+      alt: "piece of multiple layers",
+      category: "traditional",
+      subcategory: "painting"
+    },
+    {
+      src: "../../../assets/images/traditional/painting/winter_night_niagra_falls.jpg",
+      alt: "piece of multiple layers",
+      category: "traditional",
+      subcategory: "painting"
+    },
+    {
+      src: "../../../assets/images/traditional/drawing/shoes_front_angle.jpg",
+      alt: "piece of multiple layers",
+      category: "traditional",
+      subcategory: "drawing"
+    },
+    {
+      src: "../../../assets/images/traditional/painting/pears.jpg",
+      alt: "piece of multiple layers",
+      category: "traditional",
+      subcategory: "painting"
+    },
+    {
+      src: "../../../assets/images/traditional/casting/flowers_in_vase.jpg",
+      alt: "piece of multiple layers",
+      category: "traditional",
+      subcategory: "casting"
+    },
+    {
+      src: "../../../assets/images/traditional/casting/mickey_soaps.jpg",
+      alt: "piece of multiple layers",
+      category: "traditional",
+      subcategory: "casting"
+    },
+    {
+      src: "../../../assets/images/traditional/casting/mushroom_and_bench.jpg",
+      alt: "piece of multiple layers",
+      category: "traditional",
+      subcategory: "casting"
+    },
+    {
+      src: "../../../assets/images/traditional/casting/mushroom_path.jpg",
+      alt: "piece of multiple layers",
+      category: "traditional",
+      subcategory: "casting"
+    },
+    {
+      src: "../../../assets/images/traditional/casting/mutli_color_mushroom_path.jpg",
+      alt: "piece of multiple layers",
+      category: "traditional",
+      subcategory: "casting"
+    },
+    {
+      src: "../../../assets/images/traditional/casting/purple_mushroom.jpg",
+      alt: "piece of multiple layers",
+      category: "traditional",
+      subcategory: "casting"
+    },
 ];

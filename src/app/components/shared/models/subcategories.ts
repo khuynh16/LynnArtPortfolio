@@ -14,15 +14,23 @@ export let SUB_CATEGORIES: Subcategory[] = [
       filterActivated: true
     },
     {
-      name: 'Picture',
-      filterActivated: true
-    },
-    {
       name: 'Paper Craft',
       filterActivated: true
     },
     {
       name: 'Drawing',
+      filterActivated: true
+    },
+    {
+      name: 'Modeling',
+      filterActivated: true
+    },
+    {
+      name: 'Poster',
+      filterActivated: true
+    },
+    {
+      name: 'Casting',
       filterActivated: true
     },
 ];

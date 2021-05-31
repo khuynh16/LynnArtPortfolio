@@ -7,6 +7,7 @@
 img {
     max-height: 100%;
     min-width: 100%;
+    max-width: 80vw;
     object-fit: contain;
     vertical-align: bottom;
     opacity: 1;
@@ -32,12 +33,18 @@ img:hover,
     display: flex; 
     justify-content: center;
     align-items: center;
-    height: 80vh;
+    height: 65vh;
 }
 
 a {
+    display: flex;
+    flex: 1;
     position: relative;
     height: 100%;
+}
+
+.galleryWall a:not(:first-child) {
+    margin-top: 5vh;
 }
 
 .overlay {
@@ -45,11 +52,11 @@ a {
     align-items: center;
     justify-content: center;
     position: absolute;
-    top: 0;
-    bottom: 0;
+    /* top: 0; */
+    /* bottom: 0; */
     left: 0;
     right: 0;
-    height: calc(100% - 1rem);
+    height: calc(100%);
     width: 100%;
     opacity: 0;
     transition: .5s ease;
