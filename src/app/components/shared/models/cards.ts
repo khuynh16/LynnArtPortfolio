@@ -8,10 +8,10 @@ export let CARDS: Card[] = [
       subcategory: "painting"
     },
     {
-      src: "../../../assets/images/traditional/painting/artist_collaboration.jpg",
+      src: "../../../assets/images/traditional/drawing/artist_collaboration.jpg",
       alt: "piece of multiple layers",
       category: "traditional",
-      subcategory: "painting"
+      subcategory: "drawing"
     },
     {
       src: "../../../assets/images/traditional/painting/figure.jpg",
@@ -156,10 +156,10 @@ export let CARDS: Card[] = [
       subcategory: "sculpture"
     },
     {
-      src: "../../../assets/images/traditional/drawing/mario_logo.jpg",
+      src: "../../../assets/images/traditional/painting/mario_logo.jpg",
       alt: "piece of multiple layers",
       category: "traditional",
-      subcategory: "drawing"
+      subcategory: "painting"
     },
     {
       src: "../../../assets/images/traditional/painting/fruits_4_panels.jpg",
@@ -168,10 +168,10 @@ export let CARDS: Card[] = [
       subcategory: "painting"
     },
     {
-      src: "../../../assets/images/traditional/drawing/black_and_white_shoes.jpg",
+      src: "../../../assets/images/traditional/painting/black_and_white_shoes.jpg",
       alt: "piece of multiple layers",
       category: "traditional",
-      subcategory: "drawing"
+      subcategory: "painting"
     },
     {
       src: "../../../assets/images/traditional/painting/pho_inspired_mentor.jpg",
@@ -222,10 +222,10 @@ export let CARDS: Card[] = [
       subcategory: "painting"
     },
     {
-      src: "../../../assets/images/traditional/drawing/shoes_front_angle.jpg",
+      src: "../../../assets/images/traditional/painting/shoes_front_angle.jpg",
       alt: "piece of multiple layers",
       category: "traditional",
-      subcategory: "drawing"
+      subcategory: "painting"
     },
     {
       src: "../../../assets/images/traditional/painting/pears.jpg",
@@ -268,5 +268,78 @@ export let CARDS: Card[] = [
       alt: "piece of multiple layers",
       category: "traditional",
       subcategory: "casting"
+    },
+    {
+      src: "../../../assets/images/digital/modeling/dark_scene.jpg",
+      alt: "piece of multiple layers",
+      category: "digital",
+      subcategory: "modeling"
+    },
+    {
+      src: "../../../assets/images/digital/modeling/spooky_scene.jpg",
+      alt: "piece of multiple layers",
+      category: "digital",
+      subcategory: "modeling"
+    },
+    {
+      src: "../../../assets/images/traditional/painting/taco.jpg",
+      alt: "piece of multiple layers",
+      category: "traditional",
+      subcategory: "painting"
+    },
+    {
+      src: "../../../assets/images/digital/poster/disney_soul_contest.jpg",
+      alt: "piece of multiple layers",
+      category: "digital",
+      subcategory: "poster"
+    },
+    {
+      src: "../../../assets/images/traditional/painting/neo_impressionism_studio_ghibli.jpg",
+      alt: "piece of multiple layers",
+      category: "traditional",
+      subcategory: "painting"
+    },
+    {
+      src: "../../../assets/images/traditional/drawing/blind_art.jpg",
+      alt: "piece of multiple layers",
+      category: "traditional",
+      subcategory: "drawing"
+    },
+    {
+      src: "../../../assets/images/traditional/paper_craft/strata_final.jpg",
+      alt: "piece of multiple layers",
+      category: "traditional",
+      subcategory: "paper craft"
+    },
+    {
+      src: "../../../assets/images/traditional/paper_craft/strata_1st_layer.jpg",
+      alt: "piece of multiple layers",
+      category: "traditional",
+      subcategory: "paper craft"
+    },
+    {
+      src: "../../../assets/images/traditional/paper_craft/strata_2nd_layer.jpg",
+      alt: "piece of multiple layers",
+      category: "traditional",
+      subcategory: "paper craft"
+    },
+    {
+      src: "../../../assets/images/traditional/paper_craft/strata_3rd_layer.jpg",
+      alt: "piece of multiple layers",
+      category: "traditional",
+      subcategory: "paper craft"
+    },
+    {
+      src: "../../../assets/images/traditional/paper_craft/strata_4th_layer.jpg",
+      alt: "piece of multiple layers",
+      category: "traditional",
+      subcategory: "paper craft"
+    },
+    {
+      src: "../../assets/images/digital/modeling/studio_ghibli_demo/studio_ghibli_unity_demo.mp4",
+      thumbnail: "../../../assets/images/digital/modeling/studio_ghibli_demo/demo_thumbnail.jpg", 
+      alt: "mp4 video of unity demo with studio ghibli character",
+      category: "digital",
+      subcategory: "modeling"
     },
 ];
