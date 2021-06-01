@@ -4,8 +4,8 @@
         <app-category-filter></app-category-filter>
         <div class="galleryWall">
             <a href="{{ card.src }}" class="imageCard fade-in" *ngFor="let card of cards" data-fancybox="gallery" data-caption="Caption #1">
-                <img *ngIf="!card.thumbnail" src="{{ card.src }}">
-                <img *ngIf="card.thumbnail" src="{{ card.thumbnail }}">
+                <img *ngIf="!card.thumbnail" src="{{ card.src }}" loading="lazy">
+                <img *ngIf="card.thumbnail" src="{{ card.thumbnail }}" loading="lazy">
                 <div class="overlay">
                     <p>This is the overlay caption.</p>
                 </div>

@@ -35,14 +35,16 @@ form {
 
 .textInformation h2 {
     padding-bottom: 15px;
+    font-family: 'Poppins';
 }
 
 .textInformation p {
     font-size: 18px;
+    font-family: 'PT Serif';
 }
 
 hr {
-    margin: 30px 0 30px 0;
+    margin-top: 3vh;
     border: 1px solid black;
 }
 
@@ -52,6 +54,7 @@ hr {
     overflow-y: auto;
     padding-right: 4vw;
     padding-left: 4vw;
+    padding-top: 3vh;
 }
 
 .emailAndMessage {
@@ -68,7 +71,7 @@ button {
     margin-bottom: 40px;
 }
 
-mat-label {
+:host ::ng-deep mat-label {
     font-family: 'Poppins';
     color: black;
 }
