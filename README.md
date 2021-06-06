@@ -8,5 +8,7 @@ This project is to host Lynn Nguyen's art portfolio, which includes:
 
 ## Link to Website
 
-Project is not currently hosted at this time, but will use AWS S3 and Route 53 in the near future. Stay tuned.
+Project is currently hosted @ https://lynnnguyen.net.
+
+(Hosting details: Utilizes AWS' S3, Route 53, CloudFront, and Certificate Manager.)
 
