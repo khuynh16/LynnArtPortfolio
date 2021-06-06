@@ -5,7 +5,7 @@
         <div class="circle"></div>
     </button>
     <div class="logo" >
-        <button mat-button *ngIf="!isHomePage" routerLink="/home-page">Lynn Nguyen</button>
+        <button mat-button *ngIf="!isHomePage" (click)="routeToHomepage()">Lynn Nguyen</button>
     </div>
     <button mat-button class="hamburger"(click)="toggleHamburger(dropdownMenu)">
         <div #line1 class="line"></div>

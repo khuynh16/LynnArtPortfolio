@@ -2,6 +2,7 @@ import { AfterViewInit, Component, ElementRef, OnInit, ViewChild, HostListener, 
 import { ActivatedRoute, Router } from '@angular/router';
 import { Subscription } from 'rxjs';
 import { FiltersService } from '../../services/filters.service';
+import { Location } from '@angular/common';
 
 @Component({
   selector: 'app-header',
@@ -22,7 +23,7 @@ export class HeaderComponent implements OnInit, AfterViewInit, OnDestroy {
   screenWidth: number;
   subscription: Subscription;
 
-  constructor(private route: ActivatedRoute, public filtersService: FiltersService) {
+  constructor(private route: ActivatedRoute, public filtersService: FiltersService, private router: Router, private location: Location) {
     this.currentRoute = route.snapshot.url[0].path;
     this.galleryNestedRoute = route.snapshot.url.toString().replace(',', '/');
     // this.getScreenSize();
@@ -64,6 +65,11 @@ export class HeaderComponent implements OnInit, AfterViewInit, OnDestroy {
         button.style.border = "1px solid black";
       }
     }
+  }
+
+  routeToHomepage() {
+    this.location.go('/');
+    this.router.navigate(['/']);
   }
 
   toggleHamburger(dropdownMenu: HTMLElement) {
