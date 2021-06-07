@@ -17,18 +17,20 @@
     font-size: 2rem;
     font-family: 'Poppins';
     padding: 0 10vw 0 10vw;
+    text-decoration: underline;
 }
 
 .imageDiv {
     margin-top: 10vh;
     margin-bottom: 10vh;
-    height: 50vh;
+    height: 60vh;
     display: flex; 
     justify-content: space-evenly;
+    align-items: center;
 }
 
 img {
-    height: 100%;
+    height: 90%;
     -o-object-fit: cover;
     object-fit: cover;
     -o-object-position: 80% 40%;
@@ -61,6 +63,26 @@ img {
     padding-bottom: 10vh;
 }
 
+.mediumSection {
+    padding-left: 10vw;
+    padding-right: 10vw;
+    padding-bottom: 5vh;
+}
+
+.mediumSection .title {
+    padding-bottom: 3vh;
+}
+
+.mediumSection p:not(:first-child) {
+    font-family: 'PT serif';
+    font-size: 1.7rem;
+}
+
+.disclaimer {
+    padding-top: 3vh;
+    font-size: 1.4rem !important;
+    font-style: italic;
+}
 
 .fade-in-top {
 	-webkit-animation: fade-in-top 0.6s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
