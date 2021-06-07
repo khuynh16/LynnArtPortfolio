@@ -67,6 +67,12 @@ export class HeaderComponent implements OnInit, AfterViewInit, OnDestroy {
     }
   }
 
+  /**
+   * Navigates user to home-page component when user clicks logo.
+   * The location.go statement changes the url to '/', discarding the previous
+   * url. Router.navigate brings users to '/' path, where defined in app-routing-module
+   * as the home-page component.
+   */
   routeToHomepage() {
     this.location.go('/');
     this.router.navigate(['/']);
