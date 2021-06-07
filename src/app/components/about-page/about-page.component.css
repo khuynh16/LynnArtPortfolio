@@ -17,7 +17,6 @@
     font-size: 2rem;
     font-family: 'Poppins';
     padding: 0 10vw 0 10vw;
-    text-decoration: underline;
 }
 
 .imageDiv {
@@ -71,6 +70,7 @@ img {
 
 .mediumSection .title {
     padding-bottom: 3vh;
+    text-decoration: underline;
 }
 
 .mediumSection p:not(:first-child) {
