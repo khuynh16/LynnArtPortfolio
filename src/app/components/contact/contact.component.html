@@ -1,7 +1,7 @@
 <div class="container">
     <app-header></app-header>
     <div class="innerContainer">
-        <form action="" class="swing-in-top-fwd" [formGroup]="contactForm" (ngSubmit)="onSubmit()">
+        <form action="https://formsubmit.co/lynn.clover1206@gmail.com" method="POST" class="swing-in-top-fwd" [formGroup]="contactForm" (ngSubmit)="onSubmit()" *ngIf="!formCorrectlySubmitted">
             <div class="textInformation">
                 <h2>Feel Free to Contact Me via Email!</h2>
                 <p>Fill out the below form for any inquiries.</p>
@@ -21,18 +21,23 @@
                     </mat-form-field>
                 </div>
                 <div class="emailAndMessage">
-                    <mat-form-field>
+                    <mat-form-field class="emailFormField">
                         <mat-label>Email</mat-label>
                         <input matInput formControlName="email">
                         <mat-icon matSuffix>email</mat-icon>
                     </mat-form-field>
-                    <mat-form-field appearance="outline">
+                    <mat-form-field appearance="outline" class="messageFormField">
                         <mat-label>Your Message</mat-label>
                         <textarea rows="6" matInput formControlName="message" placeholder="Hello Lynn, ..."></textarea>
                     </mat-form-field>
                 </div>
                 <button mat-stroked-button type="submit">Submit</button>
             </div>
+            <input type="hidden" name="_subject" value="Email from {{ contactForm.get('firstName').value }} {{ contactForm.get('lastName').value }} via your website @ lynnnguyen.net!">
         </form>
+        <div class="thankYouMessage" *ngIf="formCorrectlySubmitted">
+            <h1>Thank your for your message!</h1>
+            <p>I will respond to you as soon as possible :)</p>
+        </div>
     </div>
 </div>

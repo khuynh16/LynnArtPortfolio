@@ -13,6 +13,7 @@ export class ContactComponent implements OnInit {
     email: new FormControl('', Validators.required),
     message: new FormControl('', Validators.required),
   });
+  formCorrectlySubmitted: boolean = false;
 
   constructor(private fb: FormBuilder) { }
 
@@ -20,7 +21,8 @@ export class ContactComponent implements OnInit {
   }
 
   onSubmit() {
-    // TODO: Use EventEmitter with form value
-    console.warn(this.contactForm.value);
+    if (this.contactForm.valid) {
+      this.formCorrectlySubmitted = true;
+    }
   }
 }
