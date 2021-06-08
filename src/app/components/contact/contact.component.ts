@@ -24,6 +24,8 @@ export class ContactComponent implements OnInit {
     if (this.contactForm.valid) {
       this.formCorrectlySubmitted = true;
 
+      // code necessary to send email to Lynn via FormSubmit.co
+      // documentation here: https://formsubmit.co/ajax-documentation
       fetch("https://formsubmit.co/ajax/lynn.clover1206@gmail.com", {
         method: "POST",
         headers: { 
