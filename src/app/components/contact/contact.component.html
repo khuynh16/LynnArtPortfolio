@@ -11,12 +11,12 @@
                 <div class="nameRow">
                     <mat-form-field>
                         <mat-label>First Name</mat-label>
-                        <input matInput formControlName="firstName">
+                        <input matInput formControlName="firstName" name="firstName">
                         <mat-icon matSuffix>person_pin</mat-icon>
                     </mat-form-field>
                     <mat-form-field>
                         <mat-label>Last Name</mat-label>
-                        <input matInput formControlName="lastName">
+                        <input matInput formControlName="lastName" name="lastName">
                         <mat-icon matSuffix>person_pin</mat-icon>
                     </mat-form-field>
                 </div>
@@ -28,7 +28,7 @@
                     </mat-form-field>
                     <mat-form-field appearance="outline" class="messageFormField">
                         <mat-label>Your Message</mat-label>
-                        <textarea rows="6" matInput formControlName="message" placeholder="Hello Lynn, ..."></textarea>
+                        <textarea rows="6" matInput formControlName="message" name="message" placeholder="Hello Lynn, ..."></textarea>
                     </mat-form-field>
                 </div>
                 <button mat-stroked-button type="submit">Submit</button>
