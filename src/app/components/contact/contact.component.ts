@@ -23,6 +23,22 @@ export class ContactComponent implements OnInit {
   onSubmit() {
     if (this.contactForm.valid) {
       this.formCorrectlySubmitted = true;
-    }
+
+      fetch("https://formsubmit.co/ajax/lynn.clover1206@gmail.com", {
+        method: "POST",
+        headers: { 
+            'Content-Type': 'application/json',
+            'Accept': 'application/json'
+        },
+        body: JSON.stringify({
+            name: this.contactForm.get('firstName').value + " " + this.contactForm.get('lastName').value,
+            email: this.contactForm.get('email').value,
+            message: this.contactForm.get('message').value
+        })
+      })
+        .then(response => response.json())
+        .then(data => console.log(data))
+        .catch(error => console.log(error));
+        }
   }
 }

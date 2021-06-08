@@ -1,7 +1,7 @@
 <div class="container">
     <app-header></app-header>
     <div class="innerContainer">
-        <form action="https://formsubmit.co/lynn.clover1206@gmail.com" method="POST" class="swing-in-top-fwd" [formGroup]="contactForm" (ngSubmit)="onSubmit()" *ngIf="!formCorrectlySubmitted">
+        <form class="swing-in-top-fwd" action="https://formsubmit.co/lynn.clover1206@gmail.com" method="POST" [formGroup]="contactForm" (ngSubmit)="onSubmit()" *ngIf="!formCorrectlySubmitted">
             <div class="textInformation">
                 <h2>Feel Free to Contact Me via Email!</h2>
                 <p>Fill out the below form for any inquiries.</p>
@@ -23,7 +23,7 @@
                 <div class="emailAndMessage">
                     <mat-form-field class="emailFormField">
                         <mat-label>Email</mat-label>
-                        <input matInput formControlName="email">
+                        <input matInput formControlName="email" name="email" type="email">
                         <mat-icon matSuffix>email</mat-icon>
                     </mat-form-field>
                     <mat-form-field appearance="outline" class="messageFormField">
