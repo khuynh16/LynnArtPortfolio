@@ -23,6 +23,8 @@ export class GalleryCardDisplayComponent implements OnInit, OnDestroy {
   screenWidth: number;
   routeFlag = "";
 
+  test: string = "true";
+
   constructor(private route: ActivatedRoute, public cardService: CardService, private eRef: ElementRef, public filtersService: FiltersService) {
     this.currentRoute = route.snapshot.routeConfig.path;
   }

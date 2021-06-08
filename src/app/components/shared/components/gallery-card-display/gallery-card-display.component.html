@@ -3,11 +3,12 @@
     <div class="test">
         <app-category-filter></app-category-filter>
         <div class="galleryWall">
-            <a href="{{ card.src }}" class="imageCard fade-in" *ngFor="let card of cards" data-fancybox="gallery" data-caption="Caption #1">
+            <a href="{{ card.src }}" class="imageCard fade-in" *ngFor="let card of cards" data-fancybox="gallery" data-caption="">
                 <img *ngIf="!card.thumbnail" src="{{ card.src }}" loading="lazy">
                 <img *ngIf="card.thumbnail" src="{{ card.thumbnail }}" loading="lazy">
                 <div class="overlay">
-                    <p>This is the overlay caption.</p>
+                    <!-- <p>This is the overlay caption.</p> -->
+                    <p>{{ card.alt }}</p>
                 </div>
             </a>
         </div>

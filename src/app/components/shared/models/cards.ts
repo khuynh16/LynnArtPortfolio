@@ -3,37 +3,37 @@ import { Card } from '../interfaces/card';
 export let CARDS: Card[] = [
     {
       src: "../../../assets/images/traditional/painting/still_life.jpg",
-      alt: "piece of multiple layers",
+      alt: "Still life. 2021. Acrylic on Canvas. 20 x 24\".",
       category: "traditional",
       subcategory: "painting"
     },
     {
       src: "../../../assets/images/traditional/drawing/artist_collaboration.jpg",
-      alt: "piece of multiple layers",
+      alt: "Artist Collaboration. 2021. Mixed Media. 20 x 30 in.",
       category: "traditional",
       subcategory: "drawing"
     },
     {
       src: "../../../assets/images/traditional/painting/figure.jpg",
-      alt: "piece of multiple layers",
+      alt: "Figure. 2021. Acrylic on Canvas. 18 x 24\".",
       category: "traditional",
       subcategory: "painting"
     },
     {
       src: "../../../assets/images/traditional/painting/landscape.jpg",
-      alt: "piece of multiple layers",
+      alt: "Landscape. 2021. Oil on canvas. 18 x 24\". Commission.",
       category: "traditional",
       subcategory: "painting"
     },
     {
       src: "../../../assets/images/traditional/paper_craft/place_mapping.jpg",
-      alt: "piece of multiple layers",
+      alt: "Place-mapping. 2021. Mixed Media on watercolor paper. 22 x 30 in.",
       category: "traditional",
       subcategory: "paper craft"
     },
     {
       src: "../../../assets/images/traditional/paper_craft/place_mapping_closeup.jpg",
-      alt: "piece of multiple layers",
+      alt: "Place-mapping (closeup). 2021. Mixed Media on watercolor paper. 22 x 30 in.",
       category: "traditional",
       subcategory: "paper craft"
     },

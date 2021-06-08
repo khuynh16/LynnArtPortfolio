@@ -65,9 +65,11 @@ a {
 }
 
 .overlay p {
-    font-size: 2em;
+    font-size: 2rem;
     color: white;
     padding-top: 1rem;
+    padding-left: 10px;
+    padding-right: 10px;
     text-align: center;
 }
 
