@@ -154,6 +154,12 @@ a[href*="youtube"] {
     }
 }
 
+@media only screen and (min-width: 1200px) {
+    .imageCard {
+        width: 45%;
+    }
+}
+
 @media (max-aspect-ratio: 1/1) and (max-width: 480px) {
     ul {
       flex-direction: row;
@@ -188,6 +194,16 @@ a[href*="youtube"] {
 
     a[href*="youtube"] img {
         object-fit: cover;
+    }
+
+    .overlay p {
+        font-size: 1.5rem;
+    }
+}
+
+@media only screen and (max-width: 700px) {
+    .overlay p {
+        font-size: 1rem;
     }
 }
 

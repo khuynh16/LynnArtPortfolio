@@ -1,4 +1,4 @@
-import { Component, ElementRef, HostListener, OnDestroy, OnInit } from '@angular/core';
+import { Component, ElementRef, HostListener, OnDestroy, OnInit, ViewChild } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { Subscription } from 'rxjs';
 
@@ -23,7 +23,7 @@ export class GalleryCardDisplayComponent implements OnInit, OnDestroy {
   screenWidth: number;
   routeFlag = "";
 
-  test: string = "true";
+  test: string = "trueDat";
 
   constructor(private route: ActivatedRoute, public cardService: CardService, private eRef: ElementRef, public filtersService: FiltersService) {
     this.currentRoute = route.snapshot.routeConfig.path;
