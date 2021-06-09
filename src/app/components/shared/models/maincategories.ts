@@ -8,7 +8,7 @@ export let MAIN_CATEGORIES = {
     ],
     'Digital': [
       'Video', 
-      'Modeling',
+      '3D Modeling',
       'Poster',
       'Photography'
     ]

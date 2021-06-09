@@ -121,7 +121,7 @@ export let CARDS: Card[] = [
     },
     {
       src: "../../../assets/images/traditional/drawing/lady_mastercopy.jpg",
-      alt: "piece of multiple layers",
+      alt: "Master Copies. 2020. Charcoal. 18 x 24\".",
       category: "traditional",
       subcategory: "drawing"
     },
@@ -204,10 +204,10 @@ export let CARDS: Card[] = [
       subcategory: "drawing"
     },
     {
-      src: "../../../assets/images/digital/modeling/watch_model.jpg",
+      src: "../../../assets/images/digital/3D_modeling/watch_model.jpg",
       alt: "piece of multiple layers",
       category: "digital",
-      subcategory: "modeling"
+      subcategory: "3d modeling"
     },
     {
       src: "../../../assets/images/traditional/painting/self_portrait.jpg",
@@ -270,16 +270,16 @@ export let CARDS: Card[] = [
       subcategory: "casting"
     },
     {
-      src: "../../../assets/images/digital/modeling/dark_scene.jpg",
+      src: "../../../assets/images/digital/3D_modeling/dark_scene.jpg",
       alt: "piece of multiple layers",
       category: "digital",
-      subcategory: "modeling"
+      subcategory: "3d modeling"
     },
     {
-      src: "../../../assets/images/digital/modeling/spooky_scene.jpg",
+      src: "../../../assets/images/digital/3D_modeling/spooky_scene.jpg",
       alt: "piece of multiple layers",
       category: "digital",
-      subcategory: "modeling"
+      subcategory: "3d modeling"
     },
     {
       src: "../../../assets/images/traditional/painting/taco.jpg",
@@ -336,10 +336,10 @@ export let CARDS: Card[] = [
       subcategory: "paper craft"
     },
     {
-      src: "../../assets/images/digital/modeling/studio_ghibli_demo/studio_ghibli_unity_demo.mp4",
-      thumbnail: "../../../assets/images/digital/modeling/studio_ghibli_demo/demo_thumbnail.jpg", 
+      src: "../../assets/images/digital/3D_modeling/studio_ghibli_demo/studio_ghibli_unity_demo.mp4",
+      thumbnail: "../../../assets/images/digital/3D_modeling/studio_ghibli_demo/demo_thumbnail.jpg", 
       alt: "mp4 video of unity demo with studio ghibli character",
       category: "digital",
-      subcategory: "modeling"
+      subcategory: "3d modeling"
     },
 ];

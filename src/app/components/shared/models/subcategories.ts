@@ -22,7 +22,7 @@ export let SUB_CATEGORIES: Subcategory[] = [
       filterActivated: true
     },
     {
-      name: 'Modeling',
+      name: '3D Modeling',
       filterActivated: true
     },
     {
