@@ -1,4 +1,4 @@
-import { Component, ElementRef, HostListener, OnDestroy, OnInit, ViewChild } from '@angular/core';
+import { AfterViewInit, Component, ElementRef, HostListener, OnDestroy, OnInit, QueryList, ViewChildren } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { Subscription } from 'rxjs';
 
@@ -12,7 +12,7 @@ import { FiltersService } from '../../services/filters.service';
   templateUrl: './gallery-card-display.component.html',
   styleUrls: ['./gallery-card-display.component.css']
 })
-export class GalleryCardDisplayComponent implements OnInit, OnDestroy {
+export class GalleryCardDisplayComponent implements OnInit, OnDestroy, AfterViewInit {
   cards: Card[];
   currentRoute;
   subscription: Subscription;
@@ -22,8 +22,7 @@ export class GalleryCardDisplayComponent implements OnInit, OnDestroy {
   currentFilterToggleState: boolean;
   screenWidth: number;
   routeFlag = "";
-
-  test: string = "trueDat";
+  @ViewChildren('galleryWallCards') galleryWallCards: QueryList<ElementRef>;
 
   constructor(private route: ActivatedRoute, public cardService: CardService, private eRef: ElementRef, public filtersService: FiltersService) {
     this.currentRoute = route.snapshot.routeConfig.path;
@@ -105,6 +104,16 @@ export class GalleryCardDisplayComponent implements OnInit, OnDestroy {
       } else if (this.currentRoute === 'gallery/digital') {
         this.cards = this.cards.filter(card => card.category === 'digital');
       }
+    });
+  }
+
+  ngAfterViewInit() {
+    // for some reason, fancybox's 'data-caption' property can not utilize string interpoplation
+    // so necessary ViewChildren component to access and manually change caption is as follows:
+    // looping through the ElementRef cards and assigning data-caption value for
+    // each card their respective text (via innerText property)
+    this.galleryWallCards.toArray().forEach(card => {
+      card.nativeElement.attributes[2].value = card.nativeElement.innerText;
     });
   }
 
