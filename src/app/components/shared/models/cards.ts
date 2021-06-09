@@ -40,21 +40,21 @@ export let CARDS: Card[] = [
     {
       src: "https://www.youtube.com/watch?v=4Nlcbl9-1Z8",
       thumbnail: "../../../assets/images/digital/video/visualizing_sound.jpg", 
-      alt: "youtube video",
+      alt: "Visualizing Sound. YouTube. Multimedia Projection and Sound class. Spring 2021. Adobe After Effect. Photos by Lynn Nguyen. Sounds from Freesound.org.",
       category: "digital",
       subcategory: "video"
     },
     {
       src: "https://www.youtube.com/watch?v=y7NoS3GUtZc",
       thumbnail: "../../../assets/images/digital/video/flashback.jpg", 
-      alt: "youtube video",
+      alt: "A Flashback. YouTube. Digital Media: Multimedia Projection and Sound. Spring 2021. Music: Freesound.org.",
       category: "digital",
       subcategory: "video"
     },
     {
       src: "https://www.youtube.com/watch?v=2KbkUySv6RM",
       thumbnail: "../../../assets/images/digital/video/friendship.jpg", 
-      alt: "youtube video",
+      alt: "Friendship Animation. YouTube. Multimedia Projection and Sound. 2021. Illustration in iBisPaint. Music: Freesound.org and my own recorded sounds.",
       category: "digital",
       subcategory: "video"
     },
@@ -133,25 +133,25 @@ export let CARDS: Card[] = [
     },
     {
       src: "../../../assets/images/traditional/drawing/striped_shirt_figure.jpg",
-      alt: "piece of multiple layers",
+      alt: "Portrait and Gesture. 2020. Charcoal. 18 x 24\".",
       category: "traditional",
       subcategory: "drawing"
     },
     {
       src: "../../../assets/images/traditional/drawing/still_life_objects.jpg",
-      alt: "piece of multiple layers",
+      alt: "Still Life. 2020. Charcoal. 18 x 24\".",
       category: "traditional",
       subcategory: "drawing"
     },
     {
       src: "../../../assets/images/traditional/sculpture/flower_bud.jpg",
-      alt: "piece of multiple layers",
+      alt: "Repetition Sculpture. 2019. 12 x 14\". Picture slides and popsicle sticks on light table.",
       category: "traditional",
       subcategory: "sculpture"
     },
     {
       src: "../../../assets/images/traditional/sculpture/viet_can_flag.jpg",
-      alt: "piece of multiple layers",
+      alt: "Cut Cans on Stretched Nylon Strings. 2020. Light up by LED twisted mini lights. Site Specific Assignment. Dimensions: L x W x H: 12 x 3 x 8ft.",
       category: "traditional",
       subcategory: "sculpture"
     },
@@ -163,19 +163,19 @@ export let CARDS: Card[] = [
     },
     {
       src: "../../../assets/images/traditional/painting/fruits_4_panels.jpg",
-      alt: "piece of multiple layers",
+      alt: "Still Life with Four Art Styles of Fruit. 2020. Acrylic on Canvas. 20 x 20\".",
       category: "traditional",
       subcategory: "painting"
     },
     {
       src: "../../../assets/images/traditional/painting/black_and_white_shoes.jpg",
-      alt: "piece of multiple layers",
+      alt: "Black and White Shoes. 2020. Acrylic on canvas. 18 x 24\". Assignment for Element of Painting class.",
       category: "traditional",
       subcategory: "painting"
     },
     {
       src: "../../../assets/images/traditional/painting/pho_inspired_mentor.jpg",
-      alt: "piece of multiple layers",
+      alt: "Inspired by Mentor. Pho. 2020. Acrylic on Canvas. 30 x 30\".",
       category: "traditional",
       subcategory: "painting"
     },
@@ -193,13 +193,13 @@ export let CARDS: Card[] = [
     },
     {
       src: "../../../assets/images/traditional/drawing/mixed_number_line_landscape.jpg",
-      alt: "piece of multiple layers",
+      alt: "Number, Line, and Landscape. 2015. Graphite. 9 x 12\".",
       category: "traditional",
       subcategory: "drawing"
     },
     {
       src: "../../../assets/images/traditional/drawing/refugees.jpg",
-      alt: "piece of multiple layers",
+      alt: "Refugee Crisis. 2015. Graphite. 9 x 12\".",
       category: "traditional",
       subcategory: "drawing"
     },
@@ -211,13 +211,13 @@ export let CARDS: Card[] = [
     },
     {
       src: "../../../assets/images/traditional/painting/self_portrait.jpg",
-      alt: "piece of multiple layers",
+      alt: "Self Portrait. 2019. Acrylic on Canvas Board. 9 x 12\".",
       category: "traditional",
       subcategory: "painting"
     },
     {
       src: "../../../assets/images/traditional/painting/winter_night_niagra_falls.jpg",
-      alt: "piece of multiple layers",
+      alt: "Niagara Falls. 2012. Acrylic on sketch. 9 x 12\".",
       category: "traditional",
       subcategory: "painting"
     },
@@ -295,7 +295,7 @@ export let CARDS: Card[] = [
     },
     {
       src: "../../../assets/images/traditional/painting/neo_impressionism_studio_ghibli.jpg",
-      alt: "piece of multiple layers",
+      alt: "Neo-Impressionism. Fan Art. 2021. Oil on Canvas. 18 x 24 in.",
       category: "traditional",
       subcategory: "painting"
     },
