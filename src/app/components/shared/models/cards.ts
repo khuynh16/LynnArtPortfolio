@@ -9,7 +9,7 @@ export let CARDS: Card[] = [
     },
     {
       src: "../../../assets/images/traditional/drawing/artist_collaboration.jpg",
-      alt: "Artist Collaboration. 2021. Mixed Media. 20 x 30 in.",
+      alt: "Artist Collaboration. 2021. Mixed Media. 20 x 30\".",
       category: "traditional",
       subcategory: "drawing"
     },
@@ -27,13 +27,13 @@ export let CARDS: Card[] = [
     },
     {
       src: "../../../assets/images/traditional/paper_craft/place_mapping.jpg",
-      alt: "Place-mapping. 2021. Mixed Media on watercolor paper. 22 x 30 in.",
+      alt: "Place-mapping. 2021. Mixed Media on watercolor paper. 22 x 30\".",
       category: "traditional",
       subcategory: "paper craft"
     },
     {
       src: "../../../assets/images/traditional/paper_craft/place_mapping_closeup.jpg",
-      alt: "Place-mapping (closeup). 2021. Mixed Media on watercolor paper. 22 x 30 in.",
+      alt: "Place-mapping (closeup). 2021. Mixed Media on watercolor paper. 22 x 30\".",
       category: "traditional",
       subcategory: "paper craft"
     },
@@ -61,61 +61,61 @@ export let CARDS: Card[] = [
     {
       src: "https://www.youtube.com/watch?v=B2_WuPjRtJQ",
       thumbnail: "../../../assets/images/digital/video/behind_the_scenes.jpg", 
-      alt: "youtube video",
+      alt: "Process of Making Sounds (First Time Being Foley Artist). 2021.",
       category: "digital",
       subcategory: "video"
     },
     {
       src: "../../../assets/images/traditional/drawing/dramatic_interior.jpg",
-      alt: "piece of multiple layers",
+      alt: "Dramatic Interior Night. 2019. Charcoal. 9 x 12\".",
       category: "traditional",
       subcategory: "drawing"
     },
     {
       src: "../../../assets/images/traditional/drawing/ink_wash_landscape.jpg",
-      alt: "piece of multiple layers",
+      alt: "Outdoor Landscape. 2020. Ink. 9 x 12\".",
       category: "traditional",
       subcategory: "drawing"
     },
     {
       src: "../../../assets/images/traditional/drawing/mondrian_grid_still_life.jpg",
-      alt: "piece of multiple layers",
+      alt: "Still Life. 2019. Charcoal. 18 x 24\".",
       category: "traditional",
       subcategory: "drawing"
     },
     {
       src: "../../../assets/images/traditional/drawing/narrative_self_portrait.jpg",
-      alt: "piece of multiple layers",
+      alt: "Portrait. 2019. Charcoal. 20 x 30\".",
       category: "traditional",
       subcategory: "drawing"
     },
     {
       src: "../../../assets/images/traditional/drawing/tonal_study_final_project.jpg",
-      alt: "piece of multiple layers",
+      alt: "Figure. 2019. Graphite. 9 x 12\".",
       category: "traditional",
       subcategory: "drawing"
     },
     {
       src: "../../../assets/images/traditional/drawing/color_spot_and_reflected_light.jpg",
-      alt: "piece of multiple layers",
+      alt: "Color Spot and Reflected Light. 2020. Oil Pastel. 9 x 12\".",
       category: "traditional",
       subcategory: "drawing"
     },
     {
       src: "../../../assets/images/traditional/drawing/time_of_day_1.jpg",
-      alt: "piece of multiple layers",
+      alt: "Time of Day: Morning. 2020. Oil Pastel. 9 x 12\".",
       category: "traditional",
       subcategory: "drawing"
     },
     {
       src: "../../../assets/images/traditional/drawing/time_of_day_2.jpg",
-      alt: "piece of multiple layers",
+      alt: "Time of Day: Evening. 2020. Oil Pastel. 9 x 12\".",
       category: "traditional",
       subcategory: "drawing"
     },
     {
       src: "../../../assets/images/traditional/drawing/time_of_day_3.jpg",
-      alt: "piece of multiple layers",
+      alt: "Time of Day: Night. 2020. Oil Pastel. 9 x 12\".",
       category: "traditional",
       subcategory: "drawing"
     },
@@ -127,7 +127,7 @@ export let CARDS: Card[] = [
     },
     {
       src: "../../../assets/images/traditional/drawing/naked_figure.jpg",
-      alt: "piece of multiple layers",
+      alt: "Figure. 2019. Charcoal. 18 x 24\".",
       category: "traditional",
       subcategory: "drawing"
     },
@@ -157,7 +157,7 @@ export let CARDS: Card[] = [
     },
     {
       src: "../../../assets/images/traditional/painting/mario_logo.jpg",
-      alt: "piece of multiple layers",
+      alt: "Mario Logo: Mono and Multicolor. 2019. Acrylic Paint. 8 x 12\".",
       category: "traditional",
       subcategory: "painting"
     },
@@ -181,13 +181,13 @@ export let CARDS: Card[] = [
     },
     {
       src: "../../../assets/images/digital/photography/manipulation.jpg",
-      alt: "piece of multiple layers",
+      alt: "Manipulation. 2021.",
       category: "digital",
       subcategory: "photography"
     },
     {
       src: "../../../assets/images/digital/poster/jazz_poster.jpg",
-      alt: "piece of multiple layers",
+      alt: "Jazz Poster for Jazz Event Night. 2020.",
       category: "digital",
       subcategory: "poster"
     },
@@ -205,7 +205,7 @@ export let CARDS: Card[] = [
     },
     {
       src: "../../../assets/images/digital/3D_modeling/watch_model.jpg",
-      alt: "piece of multiple layers",
+      alt: "Watch Model. 2021.",
       category: "digital",
       subcategory: "3d modeling"
     },
@@ -223,122 +223,122 @@ export let CARDS: Card[] = [
     },
     {
       src: "../../../assets/images/traditional/painting/shoes_front_angle.jpg",
-      alt: "piece of multiple layers",
+      alt: "Sneakers. 2020. Acrylic on Canvas. 18 x 24\".",
       category: "traditional",
       subcategory: "painting"
     },
     {
       src: "../../../assets/images/traditional/painting/pears.jpg",
-      alt: "piece of multiple layers",
+      alt: "Pears. 2020. Acrylic. 6 x 6\".",
       category: "traditional",
       subcategory: "painting"
     },
     {
       src: "../../../assets/images/traditional/casting/flowers_in_vase.jpg",
-      alt: "piece of multiple layers",
+      alt: "Water Lily. 2020. Resin Casting.",
       category: "traditional",
       subcategory: "casting"
     },
     {
       src: "../../../assets/images/traditional/casting/mickey_soaps.jpg",
-      alt: "piece of multiple layers",
+      alt: "Pop Art. 2020. Soap Casting.",
       category: "traditional",
       subcategory: "casting"
     },
     {
       src: "../../../assets/images/traditional/casting/mushroom_and_bench.jpg",
-      alt: "piece of multiple layers",
+      alt: "Closeup View. 2020. Resin Casting.",
       category: "traditional",
       subcategory: "casting"
     },
     {
       src: "../../../assets/images/traditional/casting/mushroom_path.jpg",
-      alt: "piece of multiple layers",
+      alt: "Call for Entry Practicing. Front View. 2020.",
       category: "traditional",
       subcategory: "casting"
     },
     {
       src: "../../../assets/images/traditional/casting/mutli_color_mushroom_path.jpg",
-      alt: "piece of multiple layers",
+      alt: "Call for Entry Practicing. Top View. 2020.",
       category: "traditional",
       subcategory: "casting"
     },
     {
       src: "../../../assets/images/traditional/casting/purple_mushroom.jpg",
-      alt: "piece of multiple layers",
+      alt: "",
       category: "traditional",
       subcategory: "casting"
     },
     {
       src: "../../../assets/images/digital/3D_modeling/dark_scene.jpg",
-      alt: "piece of multiple layers",
+      alt: "Baking and Lighting. Unity. 2021.",
       category: "digital",
       subcategory: "3d modeling"
     },
     {
       src: "../../../assets/images/digital/3D_modeling/spooky_scene.jpg",
-      alt: "piece of multiple layers",
+      alt: "Baking and Lighting. Unity. 2021.",
       category: "digital",
       subcategory: "3d modeling"
     },
     {
       src: "../../../assets/images/traditional/painting/taco.jpg",
-      alt: "piece of multiple layers",
+      alt: "Taco. 2021. Acrylic on Canvas. 8 x 8\".",
       category: "traditional",
       subcategory: "painting"
     },
     {
       src: "../../../assets/images/digital/poster/disney_soul_contest.jpg",
-      alt: "piece of multiple layers",
+      alt: "Soul Contest. 2021. Adobe Illustration.",
       category: "digital",
       subcategory: "poster"
     },
     {
       src: "../../../assets/images/traditional/painting/neo_impressionism_studio_ghibli.jpg",
-      alt: "Neo-Impressionism. Fan Art. 2021. Oil on Canvas. 18 x 24 in.",
+      alt: "Neo-Impressionism. Fan Art. 2021. Oil on Canvas. 18 x 24\".",
       category: "traditional",
       subcategory: "painting"
     },
     {
       src: "../../../assets/images/traditional/drawing/blind_art.jpg",
-      alt: "piece of multiple layers",
+      alt: "Blind Art. 2021. Mixed Media. 20 x 40\".",
       category: "traditional",
       subcategory: "drawing"
     },
     {
       src: "../../../assets/images/traditional/paper_craft/strata_final.jpg",
-      alt: "piece of multiple layers",
+      alt: "Strata. 2021. Mixed Media. 18 x 24\".",
       category: "traditional",
       subcategory: "paper craft"
     },
     {
       src: "../../../assets/images/traditional/paper_craft/strata_1st_layer.jpg",
-      alt: "piece of multiple layers",
+      alt: "Strata: First Layer. 2021. Oil Pastel. 18 x 24\".",
       category: "traditional",
       subcategory: "paper craft"
     },
     {
       src: "../../../assets/images/traditional/paper_craft/strata_2nd_layer.jpg",
-      alt: "piece of multiple layers",
+      alt: "Strata: Second Layer. 2021. Watercolor. 18 x 24\".",
       category: "traditional",
       subcategory: "paper craft"
     },
     {
       src: "../../../assets/images/traditional/paper_craft/strata_3rd_layer.jpg",
-      alt: "piece of multiple layers",
+      alt: "Strata: Third Layer. 2021. Ink and Alcohol Marker. 18 x 24\".",
       category: "traditional",
       subcategory: "paper craft"
     },
     {
       src: "../../../assets/images/traditional/paper_craft/strata_4th_layer.jpg",
-      alt: "piece of multiple layers",
+      alt: "Strata: Fourth Layer. 2021. Alcohol Marker. 18 x 24\".",
       category: "traditional",
       subcategory: "paper craft"
     },
     {
       src: "../../assets/images/digital/3D_modeling/studio_ghibli_demo/studio_ghibli_unity_demo.mp4",
       thumbnail: "../../../assets/images/digital/3D_modeling/studio_ghibli_demo/demo_thumbnail.jpg", 
-      alt: "mp4 video of unity demo with studio ghibli character",
+      alt: "Totoro Modeling. 2021. Maya and Unity.",
       category: "digital",
       subcategory: "3d modeling"
     },
