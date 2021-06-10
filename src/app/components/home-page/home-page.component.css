@@ -8,26 +8,27 @@
     overflow: hidden;
 }
 
-/* font-family: 'Poppins', sans-serif; */
-/* font-family: 'PT Serif', serif; */
+.textContainer {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  height: 35vh;
+  width: 90vw;
+  position: absolute; 
+  top: 40%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
 
 .name {
-    position: absolute;
     font-size: 4.5em;
     font-family: 'veganStyle', sans-serif;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -250%);
     color: white;
     width: 100%;
     text-align: center;
 }
 
 .subtext {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
     font-size: 1.3em;
     font-family: 'Poppins', serif;
     color: white;
@@ -108,20 +109,12 @@
 @media only screen and (max-width: 700px)  {
     .name {
         font-size: 2.5em;
-        transform: translate(-50%, -400%);
     }
 
     .subtext {
         font-size: 1em;
-        transform: translate(-50%, -250%);
     }
 }
-
-/* @media only screen and (max-height: 1024px) {
-  .name {
-    top: 40%;
-  }
-} */
 
 @media only screen and (max-height: 550px) {
   .name {
