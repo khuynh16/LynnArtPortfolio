@@ -156,7 +156,7 @@ a[href*="youtube"] {
 
 @media only screen and (min-width: 1200px) {
     .imageCard {
-        width: 45%;
+        width: 50vh;
     }
 }
 
