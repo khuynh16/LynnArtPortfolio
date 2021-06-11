@@ -342,4 +342,32 @@ export let CARDS: Card[] = [
       category: "digital",
       subcategory: "3d modeling"
     },
+    {
+      src: "https://openprocessing.org/sketch/990951",
+      thumbnail: "../../../assets/images/digital/sketches/daisy_flowers.jpg", 
+      alt: "Daisy Flowers. OpenProcessing.",
+      category: "digital",
+      subcategory: "sketches"
+    },
+    {
+      src: "https://openprocessing.org/sketch/969393",
+      thumbnail: "../../../assets/images/digital/sketches/summer_to_halloween_pig.jpg", 
+      alt: "Summer to Halloween Pig. OpenProcessing.",
+      category: "digital",
+      subcategory: "sketches"
+    },
+    {
+      src: "https://openprocessing.org/sketch/969440",
+      thumbnail: "../../../assets/images/digital/sketches/baby_pig.jpg", 
+      alt: "Baby Pig. OpenProcessing.",
+      category: "digital",
+      subcategory: "sketches"
+    },
+    {
+      src: "https://openprocessing.org/sketch/983896",
+      thumbnail: "../../../assets/images/digital/sketches/piggy_clock.jpg", 
+      alt: "Piggy Clock. OpenProcessing.",
+      category: "digital",
+      subcategory: "sketches"
+    },
 ];

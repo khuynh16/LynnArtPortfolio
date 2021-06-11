@@ -23,6 +23,7 @@ export class GalleryCardDisplayComponent implements OnInit, OnDestroy, AfterView
   screenWidth: number;
   routeFlag = "";
   @ViewChildren('galleryWallCards') galleryWallCards: QueryList<ElementRef>;
+  referenceToGalleryCards: QueryList<ElementRef>;
 
   constructor(private route: ActivatedRoute, public cardService: CardService, private eRef: ElementRef, public filtersService: FiltersService) {
     this.currentRoute = route.snapshot.routeConfig.path;
@@ -108,12 +109,19 @@ export class GalleryCardDisplayComponent implements OnInit, OnDestroy, AfterView
   }
 
   ngAfterViewInit() {
+    this.cardService.assignGalleryWallReference(this.galleryWallCards);
+
     // for some reason, fancybox's 'data-caption' property can not utilize string interpoplation
     // so necessary ViewChildren component to access and manually change caption is as follows:
-    // looping through the ElementRef cards and assigning data-caption value for
-    // each card their respective text (via innerText property)
+    // 1) looping through the ElementRef cards and assigning data-caption value for
+    //        each card their respective text (via innerText property)
+    // 2) if the current element's src is from openprocessing.org (e.g., an non-local src),
+    //    assign the value "iframe" to 'data-type' attribute (for fancybox implementation)
     this.galleryWallCards.toArray().forEach(card => {
       card.nativeElement.attributes[2].value = card.nativeElement.innerText;
+      if (card.nativeElement.hostname === "openprocessing.org") {
+        card.nativeElement.attributes[3].value = "iframe";
+      }
     });
   }
 

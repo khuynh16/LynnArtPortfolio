@@ -10,6 +10,7 @@ export let MAIN_CATEGORIES = {
       'Video', 
       '3D Modeling',
       'Poster',
-      'Photography'
+      'Photography',
+      'Sketches'
     ]
 };
