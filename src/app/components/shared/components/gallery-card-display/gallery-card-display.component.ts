@@ -1,4 +1,5 @@
-import { AfterViewInit, Component, ElementRef, HostListener, OnDestroy, OnInit, QueryList, ViewChildren } from '@angular/core';
+import { AfterViewInit, Component, ElementRef, HostListener, OnDestroy, OnInit, QueryList, ViewChild, ViewChildren } from '@angular/core';
+import { MatPaginator, PageEvent } from '@angular/material/paginator';
 import { ActivatedRoute } from '@angular/router';
 import { Subscription } from 'rxjs';
 
@@ -13,17 +14,21 @@ import { FiltersService } from '../../services/filters.service';
   styleUrls: ['./gallery-card-display.component.css']
 })
 export class GalleryCardDisplayComponent implements OnInit, OnDestroy, AfterViewInit {
+  @ViewChildren('galleryWallCards') galleryWallCards: QueryList<ElementRef>;
+  @ViewChild(MatPaginator, {static: true}) paginator: MatPaginator;
   cards: Card[];
-  currentRoute;
+  currentRoute: string;
   subscription: Subscription;
   filterPanelSub: Subscription
   filterToggleSub: Subscription
-  filterDivReference;
+  filterDivReference: HTMLElement;
   currentFilterToggleState: boolean;
   screenWidth: number;
-  routeFlag = "";
-  @ViewChildren('galleryWallCards') galleryWallCards: QueryList<ElementRef>;
-  referenceToGalleryCards: QueryList<ElementRef>;
+  routeFlag: string = "";
+  mainCategoryTotalNumCards: number;
+  originalMainCategoryCards: Card[];
+  currentPaginationData: PageEvent;
+
 
   constructor(private route: ActivatedRoute, public cardService: CardService, private eRef: ElementRef, public filtersService: FiltersService) {
     this.currentRoute = route.snapshot.routeConfig.path;
@@ -33,14 +38,13 @@ export class GalleryCardDisplayComponent implements OnInit, OnDestroy, AfterView
   // resolution past 700 px, the below style.transform will slide the filter buttons towards
   // the right to be visible again
   @HostListener('window:resize', ['$event'])
-    getScreenSize(event?) {
+    getScreenSize() {
       this.screenWidth = window.innerWidth;
       if (this.screenWidth > 700) {
         this.filterDivReference.style.transform = "translateX(0%)";
       } else if (this.screenWidth <= 700 && this.currentFilterToggleState) {
         this.filterDivReference.style.transform = "translateX(-120%)";
       }
-
   }
 
   @HostListener('document:click', ['$event'])
@@ -83,8 +87,7 @@ export class GalleryCardDisplayComponent implements OnInit, OnDestroy, AfterView
       this.currentFilterToggleState = state;
     });
 
-    this.subscription = this.cardService.getCards().subscribe(cards => {
-      /*
+    /*
           -  'this.cards = Cards' initializes this.cards to the original Cards object containing 
              all of the individual art pieces on the site.
           -  'this.cards = cards' updates the template depending on selected or unselected 
@@ -93,6 +96,7 @@ export class GalleryCardDisplayComponent implements OnInit, OnDestroy, AfterView
              a given route (either gallery/traditional or gallery/digital), it determines when
              to initialize the given template reference variable (this.cards) accordingly.
       */
+    this.subscription = this.cardService.getCards().subscribe(cards => {
       if (this.routeFlag === "") {
         this.routeFlag = this.currentRoute;
         this.cards = CARDS;
@@ -105,18 +109,57 @@ export class GalleryCardDisplayComponent implements OnInit, OnDestroy, AfterView
       } else if (this.currentRoute === 'gallery/digital') {
         this.cards = this.cards.filter(card => card.category === 'digital');
       }
+
+      this.mainCategoryTotalNumCards = this.cards.length;
+      this.originalMainCategoryCards = this.cards;
+      // the original view of gallery should be 10 loaded images; user can adjust view
+      // utilizing the paginators, either at bottom or top of page
+      this.cards = this.cards.slice(0, 10);
     });
   }
 
   ngAfterViewInit() {
+    // pass reference to service so that when user adjusts filter, a function within 
+    // service can procedurally add data-caption and data-type attribute values (all 
+    // because fancybox library does not support string interpolation.. (FIX THIS FANCYBOX 
+    // DEVS PLEASE)
     this.cardService.assignGalleryWallReference(this.galleryWallCards);
+    // function called here to procedurally add values to data-caption and data-type 
+    // attributes for fancybox and its images
+    this.assignCaptionAndDatatype();
+  }
 
-    // for some reason, fancybox's 'data-caption' property can not utilize string interpoplation
+  topPaginationChange(pageData: PageEvent) {
+
+    setTimeout(() => {
+      this.assignCaptionAndDatatype();
+    }, 1);
+
+    this.currentPaginationData = pageData;
+    // update the cards to actively only display paginated view, as this.cards is the 
+    // template variable of what the user sees at any given point in gallery
+    this.cards = this.originalMainCategoryCards.slice(pageData.pageIndex*pageData.pageSize, pageData.pageIndex*pageData.pageSize + pageData.pageSize);
+
+  }
+
+  bottomPaginationChange(pageData: PageEvent) {
+    this.paginator.pageSize = pageData.pageSize;
+    this.paginator.pageIndex = pageData.pageIndex;
+    this.paginator.page.emit(pageData);
+  }
+
+  // for some reason, fancybox's 'data-caption' property can not utilize string interpoplation
     // so necessary ViewChildren component to access and manually change caption is as follows:
     // 1) looping through the ElementRef cards and assigning data-caption value for
     //        each card their respective text (via innerText property)
     // 2) if the current element's src is from openprocessing.org (e.g., an non-local src),
     //    assign the value "iframe" to 'data-type' attribute (for fancybox implementation)
+
+  /**
+   * Add data-caption and data-type attribute values procedurally (provided by fancybox
+   * library). 
+   */
+  assignCaptionAndDatatype() {
     this.galleryWallCards.toArray().forEach(card => {
       card.nativeElement.attributes[2].value = card.nativeElement.innerText;
       if (card.nativeElement.hostname === "openprocessing.org") {

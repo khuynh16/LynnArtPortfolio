@@ -2,8 +2,15 @@
     <app-header></app-header>
     <div class="test">
         <app-category-filter></app-category-filter>
-        <div class="galleryWall">
-            <a #galleryWallCards href="{{ card.src }}" class="imageCard fade-in" *ngFor="let card of cards" data-fancybox="gallery" data-caption="" data-type="">
+        <mat-paginator 
+            (page)="topPaginationChange($event)"
+            #paginator
+            [length]="mainCategoryTotalNumCards"
+            [pageSize]="10"
+            [pageSizeOptions]="[5, 10, 25, 100]">
+        </mat-paginator>
+        <div class="galleryWall" *ngIf="cards.length !== 0">
+            <a #galleryWallCards href="{{ card.src }}" class="imageCard fancybox fade-in" *ngFor="let card of cards" data-fancybox="gallery" data-caption="" data-type="">
                 <img *ngIf="!card.thumbnail" src="{{ card.src }}" loading="lazy">
                 <img *ngIf="card.thumbnail" src="{{ card.thumbnail }}" loading="lazy">
                 <div class="overlay">
@@ -12,6 +19,14 @@
                 </div>
             </a>
         </div>
+        <mat-paginator 
+            (page)="bottomPaginationChange($event)" 
+            [pageSize]="paginator.pageSize"
+            [pageIndex]="paginator.pageIndex" 
+            [length]="paginator.length"
+            [pageSizeOptions]="paginator.pageSizeOptions"
+            *ngIf="paginator.length > 5">
+        </mat-paginator>
     </div>
     <div class="allFiltersDeselectedMessage" *ngIf="cards.length === 0">
         <p>All filters have been deselected. Select one to view artwork.</p>

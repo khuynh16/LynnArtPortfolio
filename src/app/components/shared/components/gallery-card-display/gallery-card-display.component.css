@@ -2,6 +2,7 @@
     min-height: 100vh;
     height: auto;
     background-color: #fce6e7;
+    overflow-x: hidden;
 }
 
 img {
@@ -104,6 +105,21 @@ a[href*="youtube"] {
     font-size: 1.5em;
     text-align: center;
 }
+
+mat-paginator {
+    background-color: #fce6e7;
+    font-family: 'Poppins';
+}
+
+mat-paginator:nth-of-type(1) {
+    padding-top: 30px;
+}
+
+mat-paginator:nth-of-type(2) {
+    padding-bottom: 20px;
+}
+
+
 .fade-in {
 	-webkit-animation: fade-in 1.5s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
 	        animation: fade-in 1.5s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
@@ -156,7 +172,7 @@ a[href*="youtube"] {
 
 @media only screen and (min-width: 1200px) {
     .imageCard {
-        width: 50vh;
+        width: 50vw;
     }
 }
 
@@ -204,6 +220,10 @@ a[href*="youtube"] {
 @media only screen and (max-width: 700px) {
     .overlay p {
         font-size: 1rem;
+    }
+
+    :host ::ng-deep .mat-paginator-container {
+        justify-content: center;
     }
 }
 
