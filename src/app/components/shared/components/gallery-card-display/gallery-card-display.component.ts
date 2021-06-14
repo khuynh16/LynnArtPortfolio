@@ -27,16 +27,17 @@ export class GalleryCardDisplayComponent implements OnInit, OnDestroy, AfterView
   routeFlag: string = "";
   mainCategoryTotalNumCards: number;
   originalMainCategoryCards: Card[];
-  currentPaginationData: PageEvent;
-
 
   constructor(private route: ActivatedRoute, public cardService: CardService, private eRef: ElementRef, public filtersService: FiltersService) {
     this.currentRoute = route.snapshot.routeConfig.path;
   }
 
-  // if filterPanel is hidden on a resolution with a width < 700px and user increases 
-  // resolution past 700 px, the below style.transform will slide the filter buttons towards
-  // the right to be visible again
+  /**
+   * Logic to be called if user were to resize browser.
+   * If filterPanel is hidden on a resolution with a width < 700px and user increases 
+   * resolution past 700 px, the below style.transform will slide the filter buttons towards
+   * the right to be visible again.
+  */ 
   @HostListener('window:resize', ['$event'])
     getScreenSize() {
       this.screenWidth = window.innerWidth;
@@ -47,23 +48,20 @@ export class GalleryCardDisplayComponent implements OnInit, OnDestroy, AfterView
       }
   }
 
+  /**
+   * HostListener event and logic will update behavior subject in filters Service to denote
+   * whether or not filter panel is open. The behavior subject is needed for logic in
+   * filters Service to close the filter panel if user clicks outside the filter panel.
+   * @param event object containing details of what/where user clicked
+   */
   @HostListener('document:click', ['$event'])
   handleOutsideClick(event) {
-    // update behavior subject in filters Service to denote that filter panel is open
     if (event.target.classList.contains('filterPanel')) {
       this.filtersService.updateCurrentFilterToggleState(true);
     }
 
-    // checks where user clicks on the gallery page
-    // once the filterPanel has been open, it checks the various places user clicks on page
-    // if user doesn't click any of the following:
-    // - the filterCategories div, 
-    // - any filter button, 
-    // - the text on the filter button (the added && condition is because the hamburger icon
-    //        seems to have the same classList, so needed condition to separate click locations),
-    // - the individual circles in the filter sidebar menu when in < 700 px width resolution,
-    // - the initial three dot button to expose the filter categories
-    // ... the 'else' class with call service functions to close the filterPanel
+    // checks to see if user clicks outside the filter panel and if so, calls the function
+    // if filters Service to close it
     if (event.target.classList.contains('filterCategories') || 
         event.target.classList.contains('filterButton') || 
         (event.target.classList.contains('mat-button-wrapper') && (event.srcElement.children.length === 0)) ||
@@ -78,24 +76,23 @@ export class GalleryCardDisplayComponent implements OnInit, OnDestroy, AfterView
   }
 
   ngOnInit(): void {
-
+    // needed reference to variables in order to manipulate and apply logic within the
+    // above host listener functions (i.e., adjusting filter panel visibility)
     this.filterPanelSub = this.filtersService.getFiltersDiv().subscribe(div => {
       this.filterDivReference = div;
     });
-
     this.filterToggleSub = this.filtersService.getCurrentFilterToggleState().subscribe(state => {
       this.currentFilterToggleState = state;
     });
-
     /*
-          -  'this.cards = Cards' initializes this.cards to the original Cards object containing 
-             all of the individual art pieces on the site.
-          -  'this.cards = cards' updates the template depending on selected or unselected 
-             filters, adjusting what the user sees on the page.
-          -  because this.routeFlag gets reinitalized to empty string whenever user leaves 
-             a given route (either gallery/traditional or gallery/digital), it determines when
-             to initialize the given template reference variable (this.cards) accordingly.
-      */
+      'this.cards = CARDS' initializes this.cards to the original Cards object containing 
+        all of the individual art pieces on the site.
+      'this.cards = cards' updates the template depending on selected or unselected 
+        filters, adjusting what the user sees on the page.
+      Because this.routeFlag gets reinitalized to empty string whenever user leaves 
+        a given route (either gallery/traditional or gallery/digital), it determines when
+        to initialize the given template reference variable (this.cards) accordingly.
+    */
     this.subscription = this.cardService.getCards().subscribe(cards => {
       if (this.routeFlag === "") {
         this.routeFlag = this.currentRoute;
@@ -110,7 +107,9 @@ export class GalleryCardDisplayComponent implements OnInit, OnDestroy, AfterView
         this.cards = this.cards.filter(card => card.category === 'digital');
       }
 
+      // length utilized within template for paginator data
       this.mainCategoryTotalNumCards = this.cards.length;
+      // initial array of main category cards "before" any category filtering
       this.originalMainCategoryCards = this.cards;
       // the original view of gallery should be 10 loaded images; user can adjust view
       // utilizing the paginators, either at bottom or top of page
@@ -129,35 +128,43 @@ export class GalleryCardDisplayComponent implements OnInit, OnDestroy, AfterView
     this.assignCaptionAndDatatype();
   }
 
+  /**
+   * Handles the top paginator changes that user may adjust.
+   * @param pageData PageEvent data from the paginator
+   */
   topPaginationChange(pageData: PageEvent) {
-
+    // setTimeout function needed for function logic (assign 'data-caption' and 'data-type'
+    // attributes its respective properties) to work properly
+    // (might be because it access a @ViewChildren element) 
     setTimeout(() => {
       this.assignCaptionAndDatatype();
     }, 1);
 
-    this.currentPaginationData = pageData;
     // update the cards to actively only display paginated view, as this.cards is the 
     // template variable of what the user sees at any given point in gallery
     this.cards = this.originalMainCategoryCards.slice(pageData.pageIndex*pageData.pageSize, pageData.pageIndex*pageData.pageSize + pageData.pageSize);
 
   }
 
+  /**
+   * Handles the bottom paginator actions that user may adjust. This will also adjust
+   * the top paginator values accordingly.
+   * @param pageData pageEvent data after paginator adjusts
+   */
   bottomPaginationChange(pageData: PageEvent) {
     this.paginator.pageSize = pageData.pageSize;
     this.paginator.pageIndex = pageData.pageIndex;
     this.paginator.page.emit(pageData);
   }
 
-  // for some reason, fancybox's 'data-caption' property can not utilize string interpoplation
-    // so necessary ViewChildren component to access and manually change caption is as follows:
-    // 1) looping through the ElementRef cards and assigning data-caption value for
-    //        each card their respective text (via innerText property)
-    // 2) if the current element's src is from openprocessing.org (e.g., an non-local src),
-    //    assign the value "iframe" to 'data-type' attribute (for fancybox implementation)
-
   /**
    * Add data-caption and data-type attribute values procedurally (provided by fancybox
-   * library). 
+   * library). Two steps:
+   *   1) looping through the ElementRef cards and assigning data-caption value for
+   *         each card their respective text (via innerText property)
+   *   2) if the current element's src is from openprocessing.org (e.g., an non-local src),
+   *         assign the value "iframe" to 'data-type' attribute (for fancybox implementation)
+   * (Function needed because fancybox's 'data-caption' doesn't support string interpolation).
    */
   assignCaptionAndDatatype() {
     this.galleryWallCards.toArray().forEach(card => {
